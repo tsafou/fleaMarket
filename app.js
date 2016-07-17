@@ -8,9 +8,12 @@ angular.module('fleaMarket', [
     'ngAnimate',
     'ngMdIcons',
     'ui.bootstrap',
-    'md.data.table'
-]).config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$mdThemingProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider) {
+    'md.data.table',
+    'bootstrapLightbox',
+    'angular-loading-bar'
+]).config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$mdThemingProvider', 'cfpLoadingBarProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider, cfpLoadingBarProvider) {
     // $locationProvider.hashPrefix('!');
+    cfpLoadingBarProvider.includeSpinner = false;
 
     $urlRouterProvider.otherwise('home');
 
@@ -72,7 +75,9 @@ angular.module('fleaMarket', [
 
     /*Theming*/
     $mdThemingProvider.theme('default')
-        .primaryPalette('cyan', {'default': '900'})
+        .primaryPalette('cyan',
+            {'default': '900'}
+        )
         .accentPalette('amber')
         .backgroundPalette('grey');
     // .dark();
@@ -84,8 +89,8 @@ angular.module('fleaMarket', [
         // $rootScope.startTime = new Date();
         //
         // $rootScope.loading_screen = pleaseWait({
-        //     logo: "",
-        //     backgroundColor: '#f46d3b',
+        //     logo: "assets/img/fleaMarketTransparent.png",
+        //     backgroundColor: 'rgb(0,96,100)',
         //     loadingHtml: '<h1 class="loading-message">Flea Market SKG</h1>'
         //     + '<div class="sk-wave">'
         //     + '<div class="sk-rect sk-rect1"></div>'

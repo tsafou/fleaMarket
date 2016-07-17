@@ -18,6 +18,10 @@
           content="Flea, Market, Thessaloniki, Skg, Kostis, Konstantinos, Tsafaris">
     <meta name="author" content="Konstantinos Tsafaris">
 
+    <script src="bower_components/please-wait/build/please-wait.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png">
@@ -52,10 +56,12 @@
     <link href="bower_components/angular-material-data-table/dist/md-data-table.min.css" rel="stylesheet"
           type="text/css"/>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
     <link rel="stylesheet" href="app.css">
 
-    <script src="bower_components/please-wait/build/please-wait.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
+    <!--<script src="bower_components/please-wait/build/please-wait.min.js"></script>-->
+    <!--<script src="bower_components/angular/angular.min.js"></script>-->
 
 </head>
 
@@ -90,7 +96,8 @@
         <md-toolbar class="md-medium-tall" layout="row" layout-align="space-between center">
             <!--style="background: transparent;"-->
             <div>
-                <md-button ng-click="mainCtrl.openSidebar()" aria-label="Open menu">
+                <md-button ng-click="mainCtrl.openSidebar()" aria-label="Open menu"
+                ng-show="$mdMedia('xs')">
                     <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
                 </md-button>
             </div>
@@ -124,25 +131,6 @@
             </div>
         </md-toolbar>
 
-        <!--<md-fab-toolbar md-direction="left" md-fab-top-right>-->
-        <!--<md-fab-trigger>-->
-        <!--<md-button aria-label="Add" class="md-fab">-->
-        <!--<i class="material-icons">menu</i>-->
-        <!--</md-button>-->
-        <!--</md-fab-trigger>-->
-        <!--<md-toolbar>-->
-        <!--<md-fab-actions>-->
-        <!--<md-button aria-label="Add User">-->
-        <!--<md-icon icon="/img/icons/user.svg"></md-icon>-->
-        <!--</md-button>-->
-        <!--<md-button aria-label="Add Group">-->
-        <!--<md-icon icon="/img/icons/group.svg"></md-icon>-->
-        <!--</md-button>-->
-        <!--</md-fab-actions>-->
-        <!--</md-toolbar>-->
-        <!--</md-fab-toolbar>-->
-
-
         <!--<div class="social-icons">-->
         <!--<ul>-->
         <!--<li ng-repeat="social in mainCtrl.socials">-->
@@ -155,7 +143,7 @@
         <!--</ul>-->
         <!--</div>-->
 
-        <md-content ui-view flex></md-content>
+        <md-content ui-view flex layout="column"></md-content>
 
         <!--<md-toolbar layout="row" layout-align="center center">-->
         <!--<div>-->
@@ -166,19 +154,21 @@
         <!--</div>-->
         <!--</md-toolbar>-->
 
-        <md-fab-toolbar md-direction="right" md-fab-bottom-left>
+        <md-fab-toolbar md-direction="right" class="md-fab-bottom-left">
             <md-fab-trigger>
                 <md-button aria-label="Add" class="md-fab">
-                    <i class="material-icons">info_outline</i>
+                    <md-icon class="material-icons orange600">info_outline</md-icon>
                 </md-button>
             </md-fab-trigger>
             <md-toolbar>
-                <md-fab-actions>
-                    <md-button aria-label="Add User">
-                        <md-icon icon="/img/icons/user.svg"></md-icon>
+                <md-fab-actions class="md-toolbar-tools" layout-align="center end">
+                    <md-button class="md-primary" aria-label="Add User">
+                        Συχνες ερωτησεις
                     </md-button>
-                    <md-button aria-label="Add Group">
-                        <md-icon icon="/img/icons/group.svg"></md-icon>
+                    <!--<md-button class="md-icon-button" aria-label="Add Group">-->
+                    <!--<i class="material-icons">info_outline</i>-->
+                    <md-button class="md-accent" aria-label="Add Group">
+                        Νομικό πλαισιο
                     </md-button>
                 </md-fab-actions>
             </md-toolbar>
@@ -197,9 +187,11 @@
 <script src="bower_components/angular-messages/angular-messages.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+<script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
 <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
 
-<script src="app.js"></script>
+<!--<script src="app.js"></script>-->
 <script src="mainController.js"></script>
 <script src="components/home/js/homeController.js"></script>
 <script src="components/about/js/aboutController.js"></script>

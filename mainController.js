@@ -6,13 +6,12 @@
  */
 angular.module('fleaMarket').controller('mainController', mainController);
 
-mainController.$inject = ['$scope', '$rootScope', '$mdSidenav', '$state', '$timeout', '$document'];
+mainController.$inject = ['$scope', '$rootScope', '$mdSidenav', '$state', '$timeout', '$document', '$mdMedia'];
 
-function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $document) {
+function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $document, $mdMedia) {
     var vm = this;
-
+    $scope.$mdMedia = $mdMedia;
     var originatorEv;
-    
 
     vm.menuItems = [
         {

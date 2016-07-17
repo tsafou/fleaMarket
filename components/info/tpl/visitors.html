@@ -1,14 +1,13 @@
-<md-grid-list md-cols-sm="8" md-cols-md="4" md-cols-lg="8" md-cols-gt-lg="12" md-row-height="4:3" md-gutter="8px">
-    <md-grid-tile
-            ng-repeat="tile in infoCtrl.gallery"
-            md-colspan-gt-sm="1"
-            md-rowspan-gt-sm="1">
-        <img ng-src="{{tile.path}}" style="width: 100%; height: 100%;"/>
-    </md-grid-tile>
-</md-grid-list>
+<ul layout="row" class="gallery">
+    <li ng-repeat="image in infoCtrl.gallery">
+        <a ng-click="openLightboxModal($index)">
+            <img ng-src="{{image.url}}" class="img-thumbnail">
+        </a>
+    </li>
+</ul>
 
-<p>Flea Market Thessaloniki Schedule</p>
 
+<h3 layout="row" layout-align="center">Flea Market Thessaloniki Schedule</h3>
 <section layout="column">
     <div class="timeline" layout="row" layout-align="space-between center">
         <md-button ng-click="goBack();"><</md-button>
@@ -16,7 +15,8 @@
         <div flex class="events" layout="row">
             <ol layout="row">
                 <li ng-repeat="event in infoCtrl.events">
-                    <a ng-click="infoCtrl.goTo($index)" update-filling ng-class="{'selected': $index == infoCtrl.selectedEvent}"
+                    <a ng-click="infoCtrl.goTo($index)" update-filling
+                       ng-class="{'selected': $index == infoCtrl.selectedEvent}"
                        ng-style="{'left': event.left}">{{event.date}}</a>
                 </li>
             </ol>
@@ -29,11 +29,18 @@
 
     <div class="events-content">
         <ol>
-            <li ng-repeat="event in infoCtrl.events" ng-show="$index == infoCtrl.selectedEvent">
-                <h2>Short Description</h2>
-                <em>{{event.date}}</em>
-                <p>{{event.desc}}</p>
+            <li ng-repeat="event in infoCtrl.events" ng-show="$index == infoCtrl.selectedEvent"
+                layout="row" layout-align="center start">
+
+                <div flex="40">
+                    <img ng-src="{{event.img}}" class="event-picture"/>
+                </div>
+                <div flex flex-offset="5">
+                    <div>Milestone Name</div>
+                    <em>{{event.date}}</em>
+                    <p>{{event.desc}}</p>
+                </div>
             </li>
         </ol>
-    </div> <!-- .events-content -->
+    </div>
 </section>

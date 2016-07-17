@@ -1,1 +1,47 @@
-contact
+<md-content flex layout="row" layout-align="center center">
+    <div></div>
+    <div flex="60" layout="column" layout-padding>
+        <h2 style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h2>
+        <p>
+            Αν εχεις απορια στειλε μηνυμα και μπλα μπλα
+        </p>
+
+        <form novalidate name="contactForm" ng-submit="">
+            <md-content layout="column">
+                <md-input-container class="md-block md-accent">
+                    <label for="name">Το όνομά σου</label>
+                    <input
+                            ng-model="person.name"
+                            type="text"
+                            name="name"
+                            id="name"/>
+                </md-input-container>
+
+                <md-input-container class="md-block md-accent">
+                    <label for="email">Το email σου (για να σου απαντήσουμε)</label>
+                    <input
+                            ng-model="person.email"
+                            type="email"
+                            name="email"
+                            id="email"/>
+                </md-input-container>
+
+                <md-input-container class="md-block md-accent">
+                    <label for="message">Η ερώτησή σου</label>
+            <textarea
+                    ng-model="person.message"
+                    name="message"
+                    id="message">
+            </textarea>
+                </md-input-container>
+            </md-content>
+
+            <md-input-container layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary" type="submit">ΑΠΟΣΤΟΛΗ</md-button>
+            </md-input-container>
+        </form>
+    </div>
+    <div></div>
+
+
+</md-content>
