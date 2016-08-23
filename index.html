@@ -112,10 +112,10 @@
                         Πληροφοριες
                     </md-button>
                     <md-menu-content width="4">
-                        <md-menu-item>
+                        <!-- <md-menu-item>
                             <md-button ui-sref="info">General</md-button>
                         </md-menu-item>
-                        <md-menu-divider></md-menu-divider>
+                        <md-menu-divider></md-menu-divider> -->
                         <md-menu-item>
                             <md-button ui-sref="info.merchants">Merchants</md-button>
                         </md-menu-item>
@@ -126,10 +126,14 @@
                     </md-menu-content>
                 </md-menu>
             </div>
-            <div flex="10" style="height:100%;" layout="row" layout-align="center center">
-                <img src="assets/img/fleaMarketTransparent.png" class="page-logo">
-            </div>
+            <!--<div flex="10" style="height:100%;" layout="row" layout-align="center center">-->
+                <!--<img src="assets/img/fleaMarketTransparent.png" class="page-logo">-->
+            <!--</div>-->
         </md-toolbar>
+
+        <div class="main-logo">
+            <img src="assets/img/fleaMarketLogo.jpg"/>
+        </div>
 
         <!--<div class="social-icons">-->
         <!--<ul>-->
@@ -162,12 +166,12 @@
             </md-fab-trigger>
             <md-toolbar>
                 <md-fab-actions class="md-toolbar-tools" layout-align="center end">
-                    <md-button class="md-primary" aria-label="Add User">
+                    <md-button class="md-primary" aria-label="FAQ" ng-click="mainCtrl.showFaq();">
                         Συχνες ερωτησεις
                     </md-button>
                     <!--<md-button class="md-icon-button" aria-label="Add Group">-->
                     <!--<i class="material-icons">info_outline</i>-->
-                    <md-button class="md-accent" aria-label="Add Group">
+                    <md-button class="md-accent" aria-label="T&C" ng-click="mainCtrl.showTerms();">
                         Νομικό πλαισιο
                     </md-button>
                 </md-fab-actions>

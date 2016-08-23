@@ -10,21 +10,23 @@
 <h3 layout="row" layout-align="center">Flea Market Thessaloniki Schedule</h3>
 <section layout="column">
     <div class="timeline" layout="row" layout-align="space-between center">
-        <md-button ng-click="goBack();"><</md-button>
+        <!-- <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent-1);"><</md-button> -->
 
         <div flex class="events" layout="row">
             <ol layout="row">
                 <li ng-repeat="event in infoCtrl.events">
                     <a ng-click="infoCtrl.goTo($index)" update-filling
                        ng-class="{'selected': $index == infoCtrl.selectedEvent}"
-                       ng-style="{'left': event.left}">{{event.date}}</a>
+                       ng-style="{'left': event.left}">
+                       <p class="event-date">{{event.date}}</p>
+                   </a>
                 </li>
             </ol>
 
             <span id="filling" class="filling-line" aria-hidden="true"></span>
         </div>
 
-        <md-button ng-click="goFor();">></md-button>
+        <!-- <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent+1);">></md-button> -->
     </div>
 
     <div class="events-content">

@@ -72,7 +72,20 @@ md-toolbar .md-menu {
     float: right;
     margin: 0 0 6px 6px;
 }
-
+.main-logo {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.main-logo img {
+    width: 15%;
+    min-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 .page-logo {
     /*width: 250px;*/
     height: 80%;
@@ -80,7 +93,9 @@ md-toolbar .md-menu {
 .event-picture {
     width: 100%;
 }
-
+.event-date {
+    transform: rotate(-45deg) !important;
+}
 
 
 .filling-line {
@@ -91,11 +106,11 @@ md-toolbar .md-menu {
     height: 100%;
     width: 100%;
     background-color: #7b9d6f;
-    -webkit-transform: scaleX(0.25);
+   /* -webkit-transform: scaleX(0.25);
     -moz-transform: scaleX(0.25);
     -ms-transform: scaleX(0.25);
     -o-transform: scaleX(0.25);
-    transform: scaleX(0.25);
+    transform: scaleX(0.25);*/
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -ms-transform-origin: left center;
@@ -184,3 +199,8 @@ ol, ul {
 
 /*Material icons custom color*/
 .material-icons.orange600 { color: #FB8C00 !important; }
+
+
+.over-fab-trigger {
+    z-index: 20;
+}

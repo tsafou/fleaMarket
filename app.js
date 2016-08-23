@@ -10,7 +10,8 @@ angular.module('fleaMarket', [
     'ui.bootstrap',
     'md.data.table',
     'bootstrapLightbox',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    // 'ngSanitize',
 ]).config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$mdThemingProvider', 'cfpLoadingBarProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider, cfpLoadingBarProvider) {
     // $locationProvider.hashPrefix('!');
     cfpLoadingBarProvider.includeSpinner = false;

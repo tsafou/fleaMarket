@@ -14,18 +14,18 @@ function homeController($scope, $mdSidenav, $state) {
     vm.slides = [
         {
             id: 0,
-            path: 'assets/img/fleaMarketTransparent.png',
-            desc: 'Flea market'
+            path: 'assets/img/books1.jpeg',
+            desc: 'Παλιά βιβλία'
         },
         {
             id: 1,
-            path: 'assets/img/fleaMarketTransparent.png',
-            desc: 'Thessaloniki'
+            path: 'assets/img/shoes1.jpeg',
+            desc: 'Παπούτσια'
         },
         {
             id: 2,
-            path: 'assets/img/fleaMarketTransparent.png',
-            desc: '3'
+            path: 'assets/img/flea1.jpeg',
+            desc: 'Έπιπλα'
         }
     ];
 

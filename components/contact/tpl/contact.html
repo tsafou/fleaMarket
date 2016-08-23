@@ -1,7 +1,7 @@
 <md-content flex layout="row" layout-align="center center">
-    <div></div>
-    <div flex="60" layout="column" layout-padding>
-        <h2 style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h2>
+    <div flex="60" flex-xs="100" layout="column" layout-padding class="over-fab-trigger">
+        <h3 ng-if="$mdMedia('xs')" style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h2>
+        <h2 ng-if="$mdMedia('gt-xs')" style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h3>
         <p>
             Αν εχεις απορια στειλε μηνυμα και μπλα μπλα
         </p>
@@ -14,16 +14,25 @@
                             ng-model="person.name"
                             type="text"
                             name="name"
-                            id="name"/>
+                            id="name"
+                            required/>
+                    <div ng-messages="contactForm.name.$error">
+                        <p ng-message="required">* Ξέχασες να συμπληρώσεις το όνομά σου!</p>
+                    </div>
                 </md-input-container>
 
-                <md-input-container class="md-block md-accent">
+                <md-input-container class="md-block md-accent" layout="column">
                     <label for="email">Το email σου (για να σου απαντήσουμε)</label>
                     <input
                             ng-model="person.email"
                             type="email"
                             name="email"
-                            id="email"/>
+                            id="email"
+                            required/>
+                    <div ng-messages="contactForm.email.$error">
+                        <p ng-message="email">* Μάλλον έχεις κάνει κάποιο λάθος στην ηλεκτρονική σου διεύθυνση!</p>
+                        <p ng-message="required">* Ξέχασες να συμπληρώσεις την ηλεκτρονική σου διεύθυνση!</p>
+                    </div>
                 </md-input-container>
 
                 <md-input-container class="md-block md-accent">
@@ -31,9 +40,17 @@
             <textarea
                     ng-model="person.message"
                     name="message"
-                    id="message">
+                    id="message"
+                    md-maxlength="150"
+                    rows="3"
+                    required>
             </textarea>
+                    <div ng-messages="contactForm.message.$error">
+                        <p ng-message="required">* Μάλλον ξέχασες τι θέλεις να μας πεις!</p>
+                        <p ng-message="md-maxlength">* Το μέγιστο μήκος του μηνύματος είναι 150 χαρακτήρες!</p>
+                    </div>
                 </md-input-container>
+
             </md-content>
 
             <md-input-container layout="row" layout-align="end center">
@@ -41,7 +58,5 @@
             </md-input-container>
         </form>
     </div>
-    <div></div>
-
 
 </md-content>

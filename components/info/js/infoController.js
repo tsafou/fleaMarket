@@ -6,10 +6,20 @@ angular.module('fleaMarket')
     .directive('updateFilling', updateFilling)
     .controller('infoController', infoController);
 
-function updateFilling() {
+updateFilling.$inject = ['$timeout'];
+
+function updateFilling($timeout) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs, controller) {
+            if (scope.$index==0) {
+                $timeout(function() {
+                    var filling = document.getElementById('filling');                
+                    updateFilling(element[0], filling, element[0].offsetParent.offsetWidth);   
+                });
+               
+            }
+
             element.bind('click', function (e) {
                 // var thisElem = angular.element(e.target)[0];
                 var filling = document.getElementById('filling');
@@ -23,6 +33,7 @@ function updateFilling() {
                 var eventWidth = style.getPropertyValue("width");
                 eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', '')) / 2;
                 var scaleValue = eventLeft / totWidth;
+                                console.log(eventLeft);
                 setTransformValue(filling, 'scaleX', scaleValue);
             }
 
@@ -43,7 +54,6 @@ infoController.$inject = ['$scope', '$mdSidenav', '$state', '$mdMedia', 'Lightbo
 
 function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
     var vm = this;
-    $scope.$mdMedia = $mdMedia;
     $scope.selected = [];
 
     $scope.query = {
@@ -55,7 +65,7 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
     vm.selectedEvent = 0;
 
     vm.goTo = function (index) {
-        updateFilling();
+        // updateFilling();
         vm.selectedEvent = index;
     };
 
@@ -113,8 +123,8 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
             medium: 7000,
             small: 6000
         },
-
     ];
+
     vm.gallery = [
         {
             title: 'klmk;m',
