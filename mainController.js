@@ -1,9 +1,7 @@
 /**
  * Created by Tsafou on 07/07/2016.
  */
-/**
- * Created by Tsafou on 04/06/2016.
- */
+
 angular.module('fleaMarket').controller('mainController', mainController);
 
 mainController.$inject = ['$scope', '$rootScope', '$mdSidenav', '$state', '$timeout', '$document', '$mdMedia', '$mdDialog', '$http'];
@@ -19,9 +17,14 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
         //     "name": "Aρχικη",
         //     "state": "home"
         // },
+
         {
             "name": "Πληροφοριες",
             "state": "info"
+        },
+        {
+            "name": "Αιτηση",
+            "state": "application"
         },
         {
             "name": "Σχετικα με μας",
@@ -73,7 +76,7 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
             ok: 'Κλεισιμο'
         });
         $mdDialog.show(alert);
-    }
+    };
 
     vm.showFaq = function () {
             alert = $mdDialog.alert({

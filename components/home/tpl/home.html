@@ -1,7 +1,7 @@
 
 <uib-carousel flex layout="column" layout-align="center center" active="homeCtrl.active" interval="homeCtrl.interval" no-wrap="homeCtrl.noWrapSlides">
     <uib-slide ng-repeat="slide in homeCtrl.slides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.path}}" style="height: 100vh; width: 100vw;">
+        <img ng-src="{{slide.path}}" style="width: 100%; height: calc(100vh - 88px); object-fit: cover;">
         <div class="carousel-caption">
             <h4>{{slide.desc}}</h4>
             <p>test</p>

@@ -58,6 +58,13 @@ angular.module('fleaMarket', [
             controllerAs: 'contactCtrl'
         })
 
+        .state('application', {
+            url: '/application',
+            templateUrl: 'components/application/tpl/application.html',
+            controller: 'applicationController',
+            controllerAs: 'applicationCtrl'
+        })
+
         .state('info', {
             url: '/info',
             templateUrl: 'components/info/tpl/info.html',
