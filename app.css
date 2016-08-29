@@ -189,6 +189,19 @@ ol, ul {
     list-style: none;
     padding: 0;
 }
+
+.bullet-list ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+.kt-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.kt-bold {
+    font-weight: 800;
+}
 .timeline li:hover {
     cursor: pointer;
 }

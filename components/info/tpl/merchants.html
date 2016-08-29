@@ -22,22 +22,17 @@
         </md-toolbar>
 
         <md-table-container>
-            <!--md-row-select multiple-->
             <table md-table  ng-model="selected" md-progress="promise">
                 <thead md-head md-order="query.order" md-on-reorder="getDesserts">
                 <tr md-row>
-                    <th md-column md-order-by="nameToLower"><span>Σταντ</span></th>
-                    <th md-column md-numeric md-order-by="calories.value"><span>Μεγάλο</span></th>
-                    <th md-column md-numeric>Μεσαίο</th>
-                    <th md-column md-numeric>Μικρό</th>
+                    <th md-column md-order-by="nameToLower"><span>Πάγκος</span></th>
+                    <th md-column md-numeric md-order-by="calories.price"><span>Κόστος</span></th>
                 </tr>
                 </thead>
                 <tbody md-body>
                 <tr md-row md-select="merchant" md-select-id="name" md-auto-select ng-repeat="merchant in infoCtrl.merchants">
                     <td md-cell>{{merchant.zone}}</td>
-                    <td md-cell>{{merchant.big}}</td>
-                    <td md-cell>{{merchant.medium}}</td>
-                    <td md-cell>{{merchant.small}}</td>
+                    <td md-cell>{{merchant.price | currency:"€"}}</td>
                 </tr>
                 </tbody>
             </table>

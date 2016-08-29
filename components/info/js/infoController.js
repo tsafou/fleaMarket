@@ -106,23 +106,17 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
 
     vm.merchants = [
         {
-            zone: 'Ζώνη 1',
-            big: 10000,
-            medium: 9000,
-            small: 8000
+            zone: 'Κανονικός Πάγκος (1.25x60)',
+            price: 90
         },
         {
-            zone: 'Ζώνη 2',
-            big: 9000,
-            medium: 8000,
-            small: 7000
+            zone: 'Προνομιακός Πάγκος (1.80x76)',
+            price: 130
         },
         {
-            zone: 'Ζώνη 3',
-            big: 8000,
-            medium: 7000,
-            small: 6000
-        },
+            zone: '2 Κανονικοί Πάγκοι Ενωμένοι (συνολική διάσταση 2.50x60)',
+            price: 180
+        }
     ];
 
     vm.gallery = [

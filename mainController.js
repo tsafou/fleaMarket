@@ -17,18 +17,17 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
         //     "name": "Aρχικη",
         //     "state": "home"
         // },
-
-        {
-            "name": "Πληροφοριες",
-            "state": "info"
-        },
-        {
-            "name": "Αιτηση",
-            "state": "application"
-        },
         {
             "name": "Σχετικα με μας",
             "state": "about"
+        },
+        {
+            "name": "Θελω να συμμετεχω",
+            "state": "application"
+        },
+        {
+            "name": "Πληροφοριες",
+            "state": "info"
         },
         {
             "name": "Επικοινωνια",
