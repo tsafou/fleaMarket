@@ -60,18 +60,18 @@ md-toolbar .md-menu {
     line-height: 0 !important;
 }
 .info-image {
-    width: 60%;
+    width: 100%;
 }
 
-.info-image.left {
-    float: left;
-    margin: 0 6px 6px 0;
-}
+/*.info-image.left {*/
+    /*float: left;*/
+    /*margin: 0 6px 6px 0;*/
+/*}*/
 
-.info-image.right {
-    float: right;
-    margin: 0 0 6px 6px;
-}
+/*.info-image.right {*/
+    /*float: right;*/
+    /*margin: 0 0 6px 6px;*/
+/*}*/
 .main-logo {
     height: 80px;
     /*position: absolute;*/
