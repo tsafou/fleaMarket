@@ -114,7 +114,7 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
             price: 130
         },
         {
-            zone: '2 Κανονικοί Πάγκοι Ενωμένοι (συνολική διάσταση 2.50x60)',
+            zone: '2 Κανονικοί Πάγκοι Ενωμένοι (2.50x60)',
             price: 180
         }
     ];
