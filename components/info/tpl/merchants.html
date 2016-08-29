@@ -3,13 +3,10 @@
         <h3>Έμποροι</h3>
         <div>
             <img src="assets/img/records.jpg" class="info-image left"/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo felis. Quisque scelerisque,
-                ligula nec lobortis feugiat, sem tellus finibus arcu, in ultricies augue nisi lobortis odio. Fusce
-                facilisis eros felis, nec venenatis leo placerat nec. Maecenas lobortis metus sit amet lectus viverra,
-                nec viverra sapien ullamcorper. Fusce tristique sed ex in pretium. Sed id sem rutrum, congue urna in,
-                dictum eros. Nullam quam mi, dapibus ut tortor at, accumsan bibendum felis. Praesent bibendum eros dui.
-                Sed vulputate in elit ac malesuada. Nam at nisl vitae velit feugiat tincidunt suscipit vel sapien.
-                Aliquam suscipit dui et aliquam vulputate. Quisque in dui nunc.</p>
+            <p>Εταιρίες και επιχειρηματίες (επαγγελματίες) πραγματοποιούν οι ίδιοι τις πωλήσεις των προϊόντων τους, 
+            εκδίδοντας τα αναγκαία παραστατικά (υποχρεωτική έκδοση αποδείξεων) με τη δική τους ταμειακή μηχανή ή με 
+            χειρόγραφο μπλοκ αποδείξεων. (τις ταμειακές μηχανές και τα χειρόγραφα μπλοκ τα προσκομίζετε οι ίδιοι. 
+            Είστε εξ ολοκλήρου υπεύθυνοι για την έκδοση των αποδείξεων).</p>
         </div>
     </div>
 
@@ -23,10 +20,10 @@
 
         <md-table-container>
             <table md-table  ng-model="selected" md-progress="promise">
-                <thead md-head>
+                <thead md-head md-order="query.order" md-on-reorder="getDesserts">
                 <tr md-row>
-                    <th md-column><span>Πάγκος</span></th>
-                    <th md-column md-numeric><span>Κόστος</span></th>
+                    <th md-column md-order-by="nameToLower"><span>Πάγκος</span></th>
+                    <th md-column md-numeric md-order-by="calories.price"><span>Κόστος</span></th>
                 </tr>
                 </thead>
                 <tbody md-body>
@@ -45,13 +42,9 @@
         <h3>Δημιουργοί</h3>
         <div>
             <img src="assets/img/clothes.jpg" class="info-image right"/>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo felis. Quisque scelerisque,
-                ligula nec lobortis feugiat, sem tellus finibus arcu, in ultricies augue nisi lobortis odio. Fusce
-                facilisis eros felis, nec venenatis leo placerat nec. Maecenas lobortis metus sit amet lectus viverra,
-                nec viverra sapien ullamcorper. Fusce tristique sed ex in pretium. Sed id sem rutrum, congue urna in,
-                dictum eros. Nullam quam mi, dapibus ut tortor at, accumsan bibendum felis. Praesent bibendum eros dui.
-                Sed vulputate in elit ac malesuada. Nam at nisl vitae velit feugiat tincidunt suscipit vel sapien.
-                Aliquam suscipit dui et aliquam vulputate. Quisque in dui nunc.</p>
+            <p>Οι ιδιώτες πραγματοποιούν υποχρεωτικά τις πωλήσεις τους μέσω των ταμειακών 
+            μηχανών της διοργάνωσης (υποχρεωτική έκδοση αποδείξεων). Αυτός είναι και ο μοναδικός τρόπος. 
+            Επί των πωλήσεων ισχύει Φ.Π.Α. 24% και χαρτόσημο 3,6%.</p>
         </div>
     </div>
 </md-content>
