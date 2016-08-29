@@ -136,18 +136,20 @@
                     <!--{{item.name}}-->
                 <!--</md-button>-->
 
-                <md-button ng-click="mainCtrl.goToState('about')"
+                <md-button flex="15" ng-click="mainCtrl.goToState('about')"
                            ui-sref-active="active" class="menu-toolbar-button">
-                    Σχετικα με μας
+                    Σχετικα
                 </md-button>
-                <md-button ng-click="mainCtrl.goToState('application')"
+                <md-button flex="15" ng-click="mainCtrl.goToState('application')"
                            ui-sref-active="active" class="menu-toolbar-button">
-                    Θέλω να συμμετεχω
+                    Συμμετοχη
                 </md-button>
+
                 <div class="main-logo">
                     <a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
                 </div>
-                <md-menu>
+
+                <md-menu flex="15">
                     <md-button aria-label="Information" class="menu-toolbar-button"
                                ng-click="mainCtrl.openMenu($mdOpenMenu, $event)">
                         Πληροφοριες
@@ -167,7 +169,7 @@
                     </md-menu-content>
                 </md-menu>
 
-                <md-button ng-click="mainCtrl.goToState('contact')"
+                <md-button flex="15" ng-click="mainCtrl.goToState('contact')"
                            ui-sref-active="active" class="menu-toolbar-button">
                     Επικοινωνια
                 </md-button>

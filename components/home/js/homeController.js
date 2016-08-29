@@ -15,17 +15,20 @@ function homeController($scope, $mdSidenav, $state) {
         {
             id: 0,
             path: 'assets/img/books1.jpeg',
-            desc: 'Παλιά βιβλία'
+            desc: 'ΦΑΓΗΤΟ',
+            subDesc: 'Δοκιμάζουμε νέες γεύσεις και διεθνείς κουζίνες'
         },
         {
             id: 1,
             path: 'assets/img/shoes1.jpeg',
-            desc: 'Παπούτσια'
+            desc: 'ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ',
+            subDesc: 'Γνωρίζουμε πρόσφυγες, φιλοζωικές οργανώσεις, μουσικές κ.α.'
         },
         {
             id: 2,
             path: 'assets/img/flea1.jpeg',
-            desc: 'Έπιπλα'
+            desc: 'ΑΝΟΙΧΤΗ ΑΓΟΡΑ',
+            subDesc: 'Αγοράζουμε δίσκους, ρούχα, υποδήματα κ.α.'
         }
     ];
 
