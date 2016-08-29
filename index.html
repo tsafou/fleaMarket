@@ -117,11 +117,25 @@
                     <ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
                 </md-button>
             </div>
+
+
             <div class="md-toolbar-tools" layout-align="center center" hide-xs>
-                <md-button ng-repeat="item in mainCtrl.menuItems" ng-click="mainCtrl.goToState(item.state)"
-                           ui-sref-active="active" class="menu-toolbar-button" ng-if="item.name!='Πληροφοριες'">
-                    {{item.name}}
+                <!--<md-button ng-repeat="item in mainCtrl.menuItems" ng-click="mainCtrl.goToState(item.state)"-->
+                           <!--ui-sref-active="active" class="menu-toolbar-button" ng-if="item.name!='Πληροφοριες'">-->
+                    <!--{{item.name}}-->
+                <!--</md-button>-->
+
+                <md-button ng-click="mainCtrl.goToState('about')"
+                           ui-sref-active="active" class="menu-toolbar-button">
+                    Σχετικα με μας
                 </md-button>
+                <md-button ng-click="mainCtrl.goToState('application')"
+                           ui-sref-active="active" class="menu-toolbar-button">
+                    Θέλω να συμμετέχω
+                </md-button>
+                <div class="main-logo">
+                    <a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
+                </div>
                 <md-menu>
                     <md-button aria-label="Information" class="menu-toolbar-button"
                                ng-click="mainCtrl.openMenu($mdOpenMenu, $event)">
@@ -141,27 +155,21 @@
                         </md-menu-item>
                     </md-menu-content>
                 </md-menu>
+
+                <md-button ng-click="mainCtrl.goToState('contact')"
+                           ui-sref-active="active" class="menu-toolbar-button">
+                    Επικοινωνία
+                </md-button>
             </div>
             <!--<div flex="10" style="height:100%;" layout="row" layout-align="center center">-->
                 <!--<img src="assets/img/fleaMarketTransparent.png" class="page-logo">-->
             <!--</div>-->
         </md-toolbar>
 
-        <div class="main-logo">
-            <a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
-        </div>
-
-        <!--<div class="social-icons">-->
-        <!--<ul>-->
-        <!--<li ng-repeat="social in mainCtrl.socials">-->
-        <!--<a ng-href="{{social.url}}" target="_blank"-->
-        <!--ng-mouseenter="mainCtrl.selectSocial($index)" ng-mouseleave="mainCtrl.selectSocial()"-->
-        <!--ng-class="{'hover-social': mainCtrl.selectedSocial == $index}">-->
-        <!--<i class="fa fa-lg fa-fw {{social.name}}"></i>-->
-        <!--</a>-->
-        <!--</li>-->
-        <!--</ul>-->
+        <!--<div class="main-logo">-->
+            <!--<a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>-->
         <!--</div>-->
+
 
         <md-content ui-view flex layout="column"></md-content>
 
