@@ -44,7 +44,21 @@ body.pg-loaded > .inner {
 md-toolbar .md-menu {
     margin: 0;
 }
-
+.pg-loading-logo-header {
+    margin: 0;
+    height: 70vh;
+}
+.pg-loading-html {
+    margin: 0 !important;
+    height: 20vh;
+}
+.pg-loading-logo {
+    max-height:100%;
+    max-width: 100%;
+}
+#typeform {
+    width: 100%;
+}
 .loader {
     position: absolute;
     top:0;
@@ -77,7 +91,7 @@ md-toolbar .md-menu {
     /*margin: 0 0 6px 6px;*/
 /*}*/
 .main-logo {
-    height: 80px;
+    height: 70px;
     /*position: absolute;*/
     /*top: 68px;*/
     /*left: 0;*/
@@ -85,7 +99,7 @@ md-toolbar .md-menu {
     /*z-index: 10;*/
 }
 .main-logo img {
-    height: 165%;
+    height: 170%;
     background-color: white;
     border-radius: 50%;
     /*width: 15%;*/

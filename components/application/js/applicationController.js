@@ -22,4 +22,9 @@ function applicationController($scope) {
 
     showApplication();
 
+
+    // var typeformElem = angular.element(document.getElementById('typeform'));
+    // typeformElem.attr("src", "https://fleamarketskg.typeform.com/to/BpticS");
+    // console.log(typeformElem);
+
 }

@@ -94,38 +94,38 @@ angular.module('fleaMarket', [
 }])
     .run(['$rootScope', '$document', '$timeout', function ($rootScope, $document, $timeout) {
         // Get the start time in order for the loader to stay on for a standard amount of time - close it in mainCtrl
-        // $rootScope.startTime = new Date();
-        //
-        // $rootScope.loading_screen = pleaseWait({
-        //     logo: "assets/img/fleaMarketTransparent.png",
-        //     backgroundColor: 'rgb(0,96,100)',
-        //     loadingHtml: '<h1 class="loading-message">Flea Market SKG</h1>'
-        //     + '<div class="sk-wave">'
-        //     + '<div class="sk-rect sk-rect1"></div>'
-        //     + '<div class="sk-rect sk-rect2"></div>'
-        //     + '<div class="sk-rect sk-rect3"></div>'
-        //     + '<div class="sk-rect sk-rect4"></div>'
-        //     + '<div class="sk-rect sk-rect5"></div>'
-        //     + '</div>'
-        //     // loadingHtml: "<p class='loading-message'>Loading! Please wait...</p>"
-        // });
-        //
-        // var diff;
-        //
-        // $document.ready(function () {
-        //     // Find the elapsed difference between the present time and the startTime set in our config
-        //     diff = new Date() - $rootScope.startTime;
-        //
-        //     // If 1500ms has elapsed, the loading splash can be hidden
-        //     // else create a timeout to hide the loading splash after 800ms has elapsed since the startTime was set
-        //     if (diff > 4000) {
-        //         $rootScope.loading_screen.finish();
-        //     } else {
-        //         $timeout(function () {
-        //             $rootScope.loading_screen.finish();
-        //         }, 4000 - diff);
-        //     }
-        // });
+        $rootScope.startTime = new Date();
+
+        $rootScope.loading_screen = pleaseWait({
+            logo: "assets/img/fleaMarketLogoTrans.png",
+            // backgroundColor: 'rgb(0,96,100)',
+            loadingHtml: '<h3 class="loading-message">Please wait, a few bits tried to escape, but we caught them.</h3>'
+            + '<div class="sk-wave">'
+            + '<div class="sk-rect sk-rect1"></div>'
+            + '<div class="sk-rect sk-rect2"></div>'
+            + '<div class="sk-rect sk-rect3"></div>'
+            + '<div class="sk-rect sk-rect4"></div>'
+            + '<div class="sk-rect sk-rect5"></div>'
+            + '</div>'
+            // loadingHtml: "<p class='loading-message'>Loading! Please wait...</p>"
+        });
+
+        var diff;
+
+        $document.ready(function () {
+            // Find the elapsed difference between the present time and the startTime set in our config
+            diff = new Date() - $rootScope.startTime;
+
+            // If 1500ms has elapsed, the loading splash can be hidden
+            // else create a timeout to hide the loading splash after 800ms has elapsed since the startTime was set
+            if (diff > 4000) {
+                $rootScope.loading_screen.finish();
+            } else {
+                $timeout(function () {
+                    $rootScope.loading_screen.finish();
+                }, 4000 - diff);
+            }
+        });
 
         // for loading between states
       /*  $rootScope.$on('$stateChangeStart', function (event) {
