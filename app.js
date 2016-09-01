@@ -99,8 +99,9 @@ angular.module('fleaMarket', [
         $rootScope.loading_screen = pleaseWait({
             logo: "assets/img/fleaMarketLogoTrans.png",
             // backgroundColor: 'rgb(0,96,100)',
-            loadingHtml: '<h3 class="loading-message">Please wait, a few bits tried to escape, but we caught them.</h3>'
-            + '<div class="sk-wave">'
+            loadingHtml:
+            // '<h3 class="loading-message">Please wait, a few bits tried to escape, but we caught them!</h3>'
+            '<div class="sk-wave">'
             + '<div class="sk-rect sk-rect1"></div>'
             + '<div class="sk-rect sk-rect2"></div>'
             + '<div class="sk-rect sk-rect3"></div>'
