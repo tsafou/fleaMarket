@@ -3,35 +3,24 @@
 body {
     font-family: 'Ubuntu Condensed', Arial, Tahoma;
 }
+.bg-img {
+    background-image: url("assets/img/Overview_3d.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
-/*.menu {*/
-/*list-style: none;*/
-/*border-bottom: 0.1em solid black;*/
-/*margin-bottom: 2em;*/
-/*padding: 0 0 0.5em;*/
-/*}*/
-
-/*.menu:before {*/
-/*content: "[";*/
-/*}*/
-
-/*.menu:after {*/
-/*content: "]";*/
-/*}*/
-
-/*.menu > li {*/
-/*display: inline;*/
-/*}*/
-
-/*.menu > li:before {*/
-/*content: "|";*/
-/*padding-right: 0.3em;*/
-/*}*/
-
-/*.menu > li:nth-child(1):before {*/
-/*content: "";*/
-/*padding: 0;*/
-/*}*/
+#main-content {
+    /*margin-top: 4%;*/
+}
+#top-toolbar {
+    border-bottom: 1px solid lightgray;
+}
+#top-toolbar .menu-toolbar-button {
+    color: lightgray;
+}
+#top-toolbar .active {
+    color: #ed8a29;
+}
 
 body > .inner {
     display: none;
@@ -74,9 +63,11 @@ md-toolbar .md-menu {
 .gallery li a img:hover {
     cursor: pointer;
 }
-.md-button {
-    line-height: 0 !important;
-}
+
+/*WHY THIS STYLE?*/
+/*.md-button {*/
+    /*line-height: 0 !important;*/
+/*}*/
 .info-image {
     width: 100%;
 }
@@ -90,23 +81,18 @@ md-toolbar .md-menu {
     /*float: right;*/
     /*margin: 0 0 6px 6px;*/
 /*}*/
-.main-logo {
-    height: 70px;
-    /*position: absolute;*/
-    /*top: 68px;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*z-index: 10;*/
+.main-logo, .main-logo-sm {
+    height: 100%;
 }
 .main-logo img {
-    height: 170%;
+    height: 105px;
     background-color: white;
     border-radius: 50%;
-    /*width: 15%;*/
-    /*min-width: 80px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*display: block;*/
+}
+.main-logo-sm img {
+    height: 88px;
+    background-color: white;
+    border-radius: 50%;
 }
 .page-logo {
     /*width: 250px;*/

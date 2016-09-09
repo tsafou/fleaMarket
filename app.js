@@ -78,16 +78,24 @@ angular.module('fleaMarket', [
         .state('info.visitors', {
             url: '/visitors',
             templateUrl: 'components/info/tpl/visitors.html'
+        })
+        .state('stef', {
+            url: '/stef',
+            templateUrl: 'components/stef/tpl/stef.html',
+            controller: 'stefController',
+            controllerAs: 'stefCtrl'
         });
 
 
     /*Theming*/
     $mdThemingProvider.theme('default')
-        .primaryPalette('cyan',
-            {'default': '900'}
+        .primaryPalette('grey',
+            {'default': '50'}
         )
         .accentPalette('amber')
-        .backgroundPalette('grey');
+        .backgroundPalette('grey', {
+            'default': '50'
+        });
     // .dark();
 
 

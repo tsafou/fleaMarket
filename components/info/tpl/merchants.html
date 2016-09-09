@@ -1,34 +1,26 @@
-<md-content layout="row" layout-xs="column" layout-padding>
-
-    <div flex layout="column" flex-order-xs="1" layout-align="start center">
-        <h3>Έμποροι</h3>
-        <div>
-            <img src="assets/img/records.jpg" class="info-image"/>
-            <p class="kt-justify">Εταιρίες και επιχειρηματίες (επαγγελματίες) πραγματοποιούν οι ίδιοι τις πωλήσεις των προϊόντων τους,
-            εκδίδοντας τα αναγκαία παραστατικά (υποχρεωτική έκδοση αποδείξεων) με τη δική τους ταμειακή μηχανή ή με 
-            χειρόγραφο μπλοκ αποδείξεων. (τις ταμειακές μηχανές και τα χειρόγραφα μπλοκ τα προσκομίζετε οι ίδιοι. 
-            Είστε εξ ολοκλήρου υπεύθυνοι για την έκδοση των αποδείξεων).</p>
-        </div>
-    </div>
+<md-content layout="column" layout-padding>
 
     <div layout="column" layout-align="center center" flex-order-xs="3">
-        <md-toolbar class="md-table-toolbar md-default">
-            <div class="md-toolbar-tools" layout="row" layout-align="center end">
-                <span>Παγκοι</span>
-            </div>
-        </md-toolbar>
+        <!--<md-toolbar class="md-table-toolbar md-default">-->
+            <!--<div class="md-toolbar-tools" layout="row" layout-align="center end">-->
+                <!--<span>Τιμοκατάλογος</span>-->
+            <!--</div>-->
+        <!--</md-toolbar>-->
+        <h3>Τιμοκατάλογος</h3>
 
         <md-table-container>
             <table md-table  ng-model="selected" md-progress="promise">
-                <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+                <thead md-head md-order="myOrder">
                 <tr md-row>
-                    <th md-column md-order-by="nameToLower"><span>Πάγκος</span></th>
-                    <th md-column md-numeric md-order-by="calories.price"><span>Κόστος</span></th>
+                    <th md-column><span>Πάγκος</span></th>
+                    <th md-column md-numeric md-order-by="dimensions"><span>Διαστάσεις</span></th>
+                    <th md-column md-numeric md-order-by="price"><span>Κόστος</span></th>
                 </tr>
                 </thead>
                 <tbody md-body>
-                <tr md-row md-select="merchant" md-select-id="name" md-auto-select ng-repeat="merchant in infoCtrl.merchants">
+                <tr md-row md-select="merchant" md-select-id="name" md-auto-select ng-repeat="merchant in infoCtrl.merchants | orderBy: myOrder">
                     <td md-cell>{{merchant.zone}}</td>
+                    <td md-cell>{{merchant.dimensions}}</td>
                     <td md-cell>{{merchant.price | currency:"€"}}</td>
                 </tr>
                 </tbody>
@@ -37,14 +29,27 @@
 
     </div>
 
+    <div layout="row" layout-xs="column" layout-padding>
+        <div flex layout="column" flex-order-xs="1" layout-align="start center" >
+            <h3>Ιδιώτες</h3>
+            <div>
+                <img src="assets/img/records.jpg" class="info-image"/>
+                <p class="kt-justify">Εταιρίες και επιχειρηματίες (επαγγελματίες) πραγματοποιούν οι ίδιοι τις πωλήσεις των προϊόντων τους,
+                    εκδίδοντας τα αναγκαία παραστατικά (υποχρεωτική έκδοση αποδείξεων) με τη δική τους ταμειακή μηχανή ή με
+                    χειρόγραφο μπλοκ αποδείξεων. (τις ταμειακές μηχανές και τα χειρόγραφα μπλοκ τα προσκομίζετε οι ίδιοι.
+                    Είστε εξ ολοκλήρου υπεύθυνοι για την έκδοση των αποδείξεων).</p>
+            </div>
+        </div>
 
-    <div flex layout="column" layout-align="start center" flex-order-xs="2">
-        <h3>Δημιουργοί</h3>
-        <div>
-            <img src="assets/img/clothes.jpg" class="info-image"/>
-            <p class="kt-justify">Οι ιδιώτες πραγματοποιούν υποχρεωτικά τις πωλήσεις τους μέσω των ταμειακών
-            μηχανών της διοργάνωσης (υποχρεωτική έκδοση αποδείξεων). Αυτός είναι και ο μοναδικός τρόπος. 
-            Επί των πωλήσεων ισχύει Φ.Π.Α. 24% και χαρτόσημο 3,6%.</p>
+        <div flex layout="column" layout-align="start center" flex-order-xs="2">
+            <h3>Επαγγελματίες</h3>
+            <div>
+                <img src="assets/img/clothes.jpg" class="info-image"/>
+                <p class="kt-justify">Οι ιδιώτες πραγματοποιούν υποχρεωτικά τις πωλήσεις τους μέσω των ταμειακών
+                    μηχανών της διοργάνωσης (υποχρεωτική έκδοση αποδείξεων). Αυτός είναι και ο μοναδικός τρόπος.
+                    Επί των πωλήσεων ισχύει Φ.Π.Α. 24% και χαρτόσημο 3,6%.</p>
+            </div>
         </div>
     </div>
+
 </md-content>

@@ -14,13 +14,13 @@ function homeController($scope, $mdSidenav, $state) {
     vm.slides = [
         {
             id: 0,
-            path: 'assets/img/books1.jpg',
+            path: 'assets/img/streetFood.jpg',
             desc: 'ΦΑΓΗΤΟ',
             subDesc: 'Δοκιμάζουμε νέες γεύσεις και διεθνείς κουζίνες'
         },
         {
             id: 1,
-            path: 'assets/img/shoes1.jpg',
+            path: 'assets/img/activities.jpg',
             desc: 'ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ',
             subDesc: 'Γνωρίζουμε πρόσφυγες, φιλοζωικές οργανώσεις, μουσικές κ.α.'
         },
