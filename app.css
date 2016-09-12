@@ -15,10 +15,11 @@ body {
 #top-toolbar {
     border-bottom: 1px solid lightgray;
 }
-#top-toolbar .menu-toolbar-button {
+#top-toolbar .menu-toolbar-button.lightgrey {
     color: lightgray;
 }
-#top-toolbar .active {
+
+#top-toolbar .menu-toolbar-button.lightgrey.active {
     color: #ed8a29;
 }
 
@@ -85,9 +86,10 @@ md-toolbar .md-menu {
     height: 100%;
 }
 .main-logo img {
-    height: 105px;
+    height: 130px;
     background-color: white;
     border-radius: 50%;
+    margin-top: -15px;
 }
 .main-logo-sm img {
     height: 88px;
@@ -104,7 +106,12 @@ md-toolbar .md-menu {
 .event-date {
     transform: rotate(-45deg) !important;
 }
-
+.lightgrey {
+    color: lightgrey;
+}
+.dimgrey {
+    color: dimgrey;
+}
 
 .filling-line {
     position: absolute;
