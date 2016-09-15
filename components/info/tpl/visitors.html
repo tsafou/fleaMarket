@@ -1,48 +1,108 @@
-<ul layout="row" class="gallery">
-    <li ng-repeat="image in infoCtrl.gallery">
-        <a ng-click="openLightboxModal($index)">
-            <img ng-src="{{image.url}}" class="img-thumbnail">
-        </a>
-    </li>
-</ul>
+<md-content flex layout="row" layout-align="center center" layout-padding class="about-top-padding">
 
+    <div flex="70" flex-xs="100" layout="column">
 
-<h3 layout="row" layout-align="center">Flea Market Thessaloniki Schedule</h3>
-<section layout="column">
-    <div class="timeline" layout="row" layout-align="space-between center">
-        <!-- <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent-1);"><</md-button> -->
-
-        <div flex class="events" layout="row">
-            <ol layout="row">
-                <li ng-repeat="event in infoCtrl.events">
-                    <a ng-click="infoCtrl.goTo($index)" update-filling
-                       ng-class="{'selected': $index == infoCtrl.selectedEvent}"
-                       ng-style="{'left': event.left}">
-                       <p class="event-date">{{event.date}}</p>
-                   </a>
-                </li>
-            </ol>
-
-            <span id="filling" class="filling-line" aria-hidden="true"></span>
+        <div layout-margin>
+            <h3 class="md-title dimgrey">Κάτοψη του χώρου</h3>
+            <img src="assets/img/overview_3dTr.png" class="plan" layout-margin/>
         </div>
 
-        <!-- <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent+1);">></md-button> -->
-    </div>
+        <div layout-margin>
+            <h3 class="dimgrey">Gallery</h3>
+            <md-divider></md-divider>
 
-    <div class="events-content">
-        <ol>
-            <li ng-repeat="event in infoCtrl.events" ng-show="$index == infoCtrl.selectedEvent"
-                layout="row" layout-align="center start">
+            <div flex layout-xs="column" layout-gt-xs="row">
+                <!--<div flex-xs="100" flex-gt-xs="60">-->
+                    <!--<img ng-src="{{infoCtrl.activeImageUrl}}" alt="Gallery"-->
+                         <!--style="height: 50vh; max-width:100%; display:block; margin: 0 auto; object-fit: contain;"/>-->
+                <!--</div>-->
 
-                <div flex="40">
-                    <img ng-src="{{event.img}}" class="event-picture"/>
+                <!--<div flex>-->
+                    <!--<md-grid-list-->
+                            <!--md-cols-xs="4" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"-->
+                            <!--md-row-height-gt-md="1:1" md-row-height="1:1"-->
+                            <!--md-gutter="12px" md-gutter-gt-sm="8px">-->
+
+                        <!--<md-grid-tile ng-repeat="image in infoCtrl.gallery">-->
+                            <!--<a ng-click="infoCtrl.setActiveImage($index)" flex layout="column" layout-align="center center">-->
+                                <!--<img ng-src="{{image.url}}" class="img-thumbnail kt-thumbnail">-->
+                            <!--</a>-->
+                            <!--&lt;!&ndash;<md-grid-tile-footer>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h3>#1: (3r x 2c)</h3>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</md-grid-tile-footer>&ndash;&gt;-->
+                        <!--</md-grid-tile>-->
+                    <!--</md-grid-list>-->
+                <!--</div>  -->
+
+                <div flex>
+                    <md-grid-list
+                            md-cols-xs="3" md-cols-sm="4" md-cols-md="5" md-cols-gt-md="6"
+                            md-row-height-gt-md="1:1" md-row-height="1:1"
+                            md-gutter="12px" md-gutter-gt-sm="8px">
+
+                        <md-grid-tile ng-repeat="image in infoCtrl.gallery">
+                            <a ng-click="openLightboxModal($index)">
+                                <img ng-src="{{image.url}}" class="img-thumbnail kt-thumbnail">
+                            </a>
+                            <!--<md-grid-tile-footer>-->
+                            <!--<h3>#1: (3r x 2c)</h3>-->
+                            <!--</md-grid-tile-footer>-->
+                        </md-grid-tile>
+                    </md-grid-list>
                 </div>
-                <div flex flex-offset="5">
-                    <div>Milestone Name</div>
-                    <em>{{event.date}}</em>
-                    <p>{{event.desc}}</p>
-                </div>
-            </li>
-        </ol>
+            </div>
+
+            <!--<ul layout="row" class="gallery">-->
+                <!--<li ng-repeat="image in infoCtrl.gallery">-->
+                    <!--<a ng-click="openLightboxModal($index)">-->
+                        <!--<img ng-src="{{image.url}}" class="img-thumbnail">-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </div>
+
+
+
+
+        <!--<h3 layout="row" layout-align="center">Flea Market Thessaloniki Schedule</h3>-->
+        <!--<section layout="column">-->
+        <!--<div class="timeline" layout="row" layout-align="space-between center">-->
+        <!--&lt;!&ndash; <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent-1);"><</md-button> &ndash;&gt;-->
+
+        <!--<div flex class="events" layout="row">-->
+        <!--<ol layout="row">-->
+        <!--<li ng-repeat="event in infoCtrl.events">-->
+        <!--<a ng-click="infoCtrl.goTo($index)" update-filling-->
+        <!--ng-class="{'selected': $index == infoCtrl.selectedEvent}"-->
+        <!--ng-style="{'left': event.left}">-->
+        <!--<p class="event-date">{{event.date}}</p>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ol>-->
+
+        <!--<span id="filling" class="filling-line" aria-hidden="true"></span>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; <md-button class="md-icon-button" ng-click="infoCtrl.goTo(infoCtrl.selectedEvent+1);">></md-button> &ndash;&gt;-->
+        <!--</div>-->
+
+        <!--<div class="events-content">-->
+        <!--<ol>-->
+        <!--<li ng-repeat="event in infoCtrl.events" ng-show="$index == infoCtrl.selectedEvent"-->
+        <!--layout="row" layout-align="center start">-->
+
+        <!--<div flex="40">-->
+        <!--<img ng-src="{{event.img}}" class="event-picture"/>-->
+        <!--</div>-->
+        <!--<div flex flex-offset="5">-->
+        <!--<div>Milestone Name</div>-->
+        <!--<em>{{event.date}}</em>-->
+        <!--<p>{{event.desc}}</p>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--</ol>-->
+        <!--</div>-->
+        <!--</section>-->
+
     </div>
-</section>
+</md-content>

@@ -12,12 +12,12 @@ function updateFilling($timeout) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs, controller) {
-            if (scope.$index==0) {
-                $timeout(function() {
-                    var filling = document.getElementById('filling');                
-                    updateFilling(element[0], filling, element[0].offsetParent.offsetWidth);   
+            if (scope.$index == 0) {
+                $timeout(function () {
+                    var filling = document.getElementById('filling');
+                    updateFilling(element[0], filling, element[0].offsetParent.offsetWidth);
                 });
-               
+
             }
 
             element.bind('click', function (e) {
@@ -33,7 +33,7 @@ function updateFilling($timeout) {
                 var eventWidth = style.getPropertyValue("width");
                 eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', '')) / 2;
                 var scaleValue = eventLeft / totWidth;
-                                console.log(eventLeft);
+                // console.log(eventLeft);
                 setTransformValue(filling, 'scaleX', scaleValue);
             }
 
@@ -125,25 +125,55 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
     vm.gallery = [
         {
             title: 'klmk;m',
-            url: 'assets/img/clothes.jpg'
+            url: 'assets/img/gallery/1.jpg'
         },
         {
             title: 'kmlkmn',
-            url: 'assets/img/records.jpg'
+            url: 'assets/img/gallery/2.jpg'
         },
         {
             title: 'rddf',
-            url: 'assets/img/milos1.jpg'
+            url: 'assets/img/gallery/3.jpg'
         },
         {
             title: 'jhfdg',
-            url: 'assets/img/milos2.jpg'
+            url: 'assets/img/gallery/4.jpeg'
         },
         {
             title: 'kmlkmn',
-            url: 'assets/img/records.jpg'
+            url: 'assets/img/gallery/5.jpeg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/6.jpg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/7.jpg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/8.jpg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/9.jpg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/10.jpg'
+        },
+        {
+            title: 'kmlkmn',
+            url: 'assets/img/gallery/11.jpg'
         }
     ];
+
+
+    vm.activeImageUrl = vm.gallery[0].url;
+    vm.setActiveImage = function (index) {
+        vm.activeImageUrl = vm.gallery[index].url;
+    };
 
     $scope.openLightboxModal = function (index) {
         Lightbox.openModal(vm.gallery, index);

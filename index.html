@@ -67,13 +67,11 @@
 
 
     <!--CSS-->
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,greek,greek-ext' rel='stylesheet'
-          type='text/css'>
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <!--<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,greek,greek-ext' rel='stylesheet'-->
+          <!--type='text/css'>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="assets/animate/animate.css">-->
     <link rel="stylesheet" href="bower_components/SpinKit/css/spinkit.css">
     <link rel="stylesheet" href="bower_components/SpinKit/css/spinners/3-wave.css">
     <link rel="stylesheet" href="bower_components/please-wait/build/please-wait.css">
@@ -83,6 +81,8 @@
     <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
     <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css'
           media='all'/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&subset=greek,greek-ext" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="app.css">
 
     <script>
@@ -142,7 +142,7 @@
 
             <div flex="60" class="md-toolbar-tools" layout-align="center center" hide-gt-xs>
                 <div class="main-logo-sm">
-                    <a ui-sref="home"><img src="assets/img/fleaMarketLogoTransSM.png"/></a>
+                    <a ui-sref="home" ng-mouseenter="active=true" ng-mouseleave="active=false" ng-class="active ? 'active-logo' : ''"><img src="assets/img/fleaMarketLogoTransSM.png"/></a>
                 </div>
             </div>
 
@@ -160,7 +160,7 @@
                 </md-button>
 
                 <div class="main-logo">
-                    <a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
+                    <a ui-sref="home" ng-mouseenter="active=true" ng-mouseleave="active=false" ng-class="active ? 'active-main-logo' : ''"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
                 </div>
 
                 <md-menu flex="15" layout="row">
@@ -199,7 +199,7 @@
         <!--</div>-->
 
 
-        <md-content ui-view flex layout="column" id="main-content" class="bg-img"></md-content>
+        <md-content ui-view flex layout="column" id="main-content"></md-content>
 
         <!--<md-toolbar layout="row" layout-align="center center">-->
         <!--<div>-->

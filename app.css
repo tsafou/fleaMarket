@@ -1,19 +1,23 @@
 /* app css stylesheet */
 
 body {
-    font-family: 'Ubuntu Condensed', Arial, Tahoma;
+    /*font-family: 'Ubuntu Condensed', Arial, Tahoma;*/
+    font-family: 'Roboto', sans-serif;
 }
 .bg-img {
     background-image: url("assets/img/Overview_3d.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
+.about-top-padding {
+    padding-top: 30px;
+}
 #main-content {
     /*margin-top: 4%;*/
 }
 #top-toolbar {
     border-bottom: 1px solid lightgray;
+    background-color: #FFFFFF;
 }
 #top-toolbar .menu-toolbar-button.lightgrey {
     color: lightgray;
@@ -90,6 +94,7 @@ md-toolbar .md-menu {
     background-color: white;
     border-radius: 50%;
     margin-top: -15px;
+    border-bottom: 1px solid lightgray;
 }
 .main-logo-sm img {
     height: 88px;
@@ -231,4 +236,45 @@ ol, ul {
 
 .over-fab-trigger {
     z-index: 20;
+}
+
+
+.plan {
+    width: 100%;
+}
+
+
+md-grid-tile a {
+    display: flex;
+    height: 100%;
+}
+md-grid-tile a img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+.kt-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#contact-form .md-button span{
+    color: whitesmoke;
+}
+.contact-letter {
+    background: url('assets/img/stampTaxFreeTr.png') 100% 0 no-repeat;
+    background-size: 35%;
+    opacity: 0.8;
+}
+
+.active-main-logo img {
+    background-color: lightgrey;
+}
+.logo {
+    opacity: 0.7;
+}
+.active-logo {
+    opacity: 1;
 }
