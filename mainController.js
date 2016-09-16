@@ -18,16 +18,20 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
         //     "state": "home"
         // },
         {
-            "name": "Σχετικα με μας",
+            "name": "Σχετικα",
             "state": "about"
         },
         {
-            "name": "Θελω να συμμετεχω",
+            "name": "Συμμετοχη",
             "state": "application"
         },
         {
-            "name": "Πληροφοριες",
-            "state": "info"
+            "name": "Εκθετες",
+            "state": "info.merchants"
+        },
+        {
+            "name": "Επισκεπτες",
+            "state": "info.visitors"
         },
         {
             "name": "Επικοινωνια",

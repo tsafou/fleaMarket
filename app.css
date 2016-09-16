@@ -76,16 +76,9 @@ md-toolbar .md-menu {
 .info-image {
     width: 100%;
 }
-
-/*.info-image.left {*/
-    /*float: left;*/
-    /*margin: 0 6px 6px 0;*/
-/*}*/
-
-/*.info-image.right {*/
-    /*float: right;*/
-    /*margin: 0 0 6px 6px;*/
-/*}*/
+.margin-top {
+    margin-top: 30px;
+}
 .main-logo, .main-logo-sm {
     height: 100%;
 }
@@ -94,7 +87,7 @@ md-toolbar .md-menu {
     background-color: white;
     border-radius: 50%;
     margin-top: -15px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 2px solid lightgray;
 }
 .main-logo-sm img {
     height: 88px;
@@ -249,7 +242,7 @@ md-grid-tile a {
     height: 100%;
 }
 md-grid-tile a img {
-    height: 80%;
+    height: 90%;
     width: 100%;
     object-fit: contain;
     align-self: center;
