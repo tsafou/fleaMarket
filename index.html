@@ -67,13 +67,11 @@
 
 
     <!--CSS-->
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,greek,greek-ext' rel='stylesheet'
-          type='text/css'>
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <!--<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,greek,greek-ext' rel='stylesheet'-->
+          <!--type='text/css'>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="assets/animate/animate.css">-->
     <link rel="stylesheet" href="bower_components/SpinKit/css/spinkit.css">
     <link rel="stylesheet" href="bower_components/SpinKit/css/spinners/3-wave.css">
     <link rel="stylesheet" href="bower_components/please-wait/build/please-wait.css">
@@ -83,6 +81,8 @@
     <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
     <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css'
           media='all'/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&subset=greek,greek-ext" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="app.css">
 
     <script>
@@ -142,7 +142,7 @@
 
             <div flex="60" class="md-toolbar-tools" layout-align="center center" hide-gt-xs>
                 <div class="main-logo-sm">
-                    <a ui-sref="home"><img src="assets/img/fleaMarketLogoTransSM.png"/></a>
+                    <a ui-sref="home" ng-mouseenter="active=true" ng-mouseleave="active=false" ng-class="active ? 'active-logo' : ''"><img src="assets/img/fleaMarketLogoTransSM.png"/></a>
                 </div>
             </div>
 
@@ -151,20 +151,20 @@
             <div class="md-toolbar-tools" layout-align="center center" hide-xs>
 
                 <md-button flex="15" ng-click="mainCtrl.goToState('about')"
-                           ui-sref="about" ui-sref-active="active" class="menu-toolbar-button">
+                           ui-sref="about" ui-sref-active="active" class="menu-toolbar-button lightgrey">
                     Σχετικα
                 </md-button>
                 <md-button flex="15" ng-click="mainCtrl.goToState('application')"
-                           ui-sref="application" ui-sref-active="active" class="menu-toolbar-button">
+                           ui-sref="application" ui-sref-active="active" class="menu-toolbar-button lightgrey">
                     Συμμετοχη
                 </md-button>
 
                 <div class="main-logo">
-                    <a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
+                    <a ui-sref="home" ng-mouseenter="mainCtrl.active=true" ng-mouseleave="mainCtrl.active=false" ng-class="active ? 'active-main-logo' : ''"><img src="assets/img/fleaMarketLogoTrans.png"/></a>
                 </div>
 
                 <md-menu flex="15" layout="row">
-                    <md-button flex aria-label="Information" class="menu-toolbar-button"
+                    <md-button flex aria-label="Information" class="menu-toolbar-button lightgrey"
                                ui-sref="info" ui-sref-active="active"
                                ng-click="mainCtrl.openMenu($mdOpenMenu, $event)">
                         Πληροφοριες
@@ -185,51 +185,53 @@
                 </md-menu>
 
                 <md-button flex="15" ng-click="mainCtrl.goToState('contact')"
-                           ui-sref="contact" ui-sref-active="active" class="menu-toolbar-button">
+                           ui-sref="contact" ui-sref-active="active" class="menu-toolbar-button lightgrey">
                     Επικοινωνια
                 </md-button>
+
             </div>
-            <!--<div flex="10" style="height:100%;" layout="row" layout-align="center center">-->
-            <!--<img src="assets/img/fleaMarketTransparent.png" class="page-logo">-->
-            <!--</div>-->
+
+
         </md-toolbar>
 
-        <!--<div class="main-logo">-->
-        <!--<a ui-sref="home"><img src="assets/img/fleaMarketLogoTrans.png"/></a>-->
-        <!--</div>-->
+
+        <md-content ui-view flex layout="column" id="main-content"></md-content>
 
 
-        <md-content ui-view flex layout="column" id="main-content" class="bg-img"></md-content>
+        <md-fab-speed-dial md-direction="up" class="md-fling md-fab-bottom-left" md-theme="tabs"
+                           ng-hide="state.is('home')">
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-primary">
+                    <md-icon md-svg-src="assets/img/menu-alt.svg" style="color:white;"></md-icon>
+                </md-button>
+            </md-fab-trigger>
 
-        <!--<md-toolbar layout="row" layout-align="center center">-->
-        <!--<div>-->
-        <!--<md-button>FAQ</md-button>-->
-        <!--</div>-->
-        <!--<div>-->
-        <!--<md-button>Legal</md-button>-->
-        <!--</div>-->
-        <!--</md-toolbar>-->
-
-        <!--<md-fab-toolbar md-direction="right" class="md-fab-bottom-left">-->
-        <!--<md-fab-trigger>-->
-        <!--<md-button aria-label="Add" class="md-fab">-->
-        <!--<md-icon class="material-icons orange600">info_outline</md-icon>-->
-        <!--</md-button>-->
-        <!--</md-fab-trigger>-->
-        <!--<md-toolbar>-->
-        <!--<md-fab-actions class="md-toolbar-tools" layout-align="center end">-->
-        <!--<md-button class="md-primary" aria-label="FAQ" ng-click="mainCtrl.showFaq();">-->
-        <!--Συχνες ερωτησεις-->
-        <!--</md-button>-->
-        <!--&lt;!&ndash;<md-button class="md-icon-button" aria-label="Add Group">&ndash;&gt;-->
-        <!--&lt;!&ndash;<i class="material-icons">info_outline</i>&ndash;&gt;-->
-        <!--<md-button class="md-accent" aria-label="T&C" ng-click="mainCtrl.showTerms();">-->
-        <!--Νομικό πλαισιο-->
-        <!--</md-button>-->
-        <!--</md-fab-actions>-->
-        <!--</md-toolbar>-->
-        <!--</md-fab-toolbar>-->
-
+            <md-fab-actions md-theme="default">
+                <md-button aria-label="FAQ" class="md-fab md-raised md-mini" ng-click="mainCtrl.showFaq();">
+                    <md-tooltip md-direction="right">
+                        Frequently Asked Questions</md-tooltip>
+                    FAQ
+                </md-button>
+                <md-button aria-label="Πληροφορίες συμμετοχής" class="md-fab md-raised md-mini" ng-click="mainCtrl.showBasicInfo();">
+                    <md-icon md-svg-src="assets/img/info.svg" aria-label="Πληροφορίες συμμετοχής"></md-icon>
+                    <md-tooltip md-direction="right">
+                        Πληροφορίες συμμετοχής
+                    </md-tooltip>
+                </md-button>
+                <md-button aria-label="Facebook" class="md-fab md-raised md-mini" href="https://www.facebook.com/fleathessaloniki/" target="_blank">
+                    <md-icon md-svg-src="assets/img/facebook.svg" aria-label="Facebook"></md-icon>
+                    <md-tooltip md-direction="right">
+                        Βρείτε μας στο Facebook
+                    </md-tooltip>
+                </md-button>
+                <md-button aria-label="Instagram" class="md-fab md-raised md-mini" href="https://www.instagram.com/upnloud/" target="_blank">
+                    <md-icon md-svg-src="assets/img/instagram.svg" aria-label="Instagram"></md-icon>
+                    <md-tooltip md-direction="right">
+                        Βρείτε μας στο Instagram
+                    </md-tooltip>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
 
     </md-content>
 </div>
@@ -243,6 +245,7 @@
 <script src="bower_components/angular-messages/angular-messages.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
 <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
 <script type="text/javascript" src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>

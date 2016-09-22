@@ -14,21 +14,21 @@ function homeController($scope, $mdSidenav, $state) {
     vm.slides = [
         {
             id: 0,
-            path: 'assets/img/streetFood.jpg',
-            desc: 'ΦΑΓΗΤΟ',
-            subDesc: 'Δοκιμάζουμε νέες γεύσεις και διεθνείς κουζίνες'
+            path: 'assets/img/flea1.jpg',
+            desc: 'Flea Market',
+            subDesc: 'Αγοράζουμε δίσκους, ρούχα, υποδήματα κ.α.'
         },
         {
             id: 1,
-            path: 'assets/img/activities.jpg',
-            desc: 'ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ',
-            subDesc: 'Γνωρίζουμε πρόσφυγες, φιλοζωικές οργανώσεις, μουσικές κ.α.'
+            path: 'assets/img/streetFood.jpg',
+            desc: 'Street Food',
+            subDesc: 'Δοκιμάζουμε νέες γεύσεις και διεθνείς κουζίνες'
         },
         {
             id: 2,
-            path: 'assets/img/flea1.jpg',
-            desc: 'ΑΝΟΙΧΤΗ ΑΓΟΡΑ',
-            subDesc: 'Αγοράζουμε δίσκους, ρούχα, υποδήματα κ.α.'
+            path: 'assets/img/activities.jpg',
+            desc: 'Activities',
+            subDesc: 'Γνωρίζουμε πρόσφυγες, φιλοζωικές οργανώσεις, μουσικές κ.α.'
         }
     ];
 

@@ -1,25 +1,132 @@
-<md-content flex layout="row" layout-align="center center" layout-padding layout-margin>
+<md-content flex layout="row" layout-align="center center" layout-padding class="about-top-padding kt-test">
 
-    <div flex="70" layout="column" class="bullet-list">
+    <div flex="70" flex-xs="100" layout="column" class="bullet-list">
 
-        <h2>24-25 Σεπτέμβρη 2016, Πολυχώρος Μύλος</h2>
-        <p>O Upnloud δημιουργεί το πρώτο <i>"Flea Market & Street Food SKG"</i> με όραμα να καθιερώσει μια εβδομαδιαία γιορτή γεύσεων και ανταλλαγής αντικειμένων στην Θεσσαλονίκη.
-        Στην πρώτη συνάντηση οι επισκέπτες έρχοντε σε επαφή με την εναλλακτική χρήση αντικειμένων, μαθαίνουν την αξία του παλιού και νιώθουν
-        τη χαρά να το μεταποιείς σε κάτι νέο. Γνωρίζουν νέες κουλτούρες μέσω της γεύσης (street food) ενώ τα παιδιά γίνονται ενεργά (workshops, outdoor games).
-        Ενημερώνωνονται για κοινωνικά προβλήματα και βοηθάνε ασθενείς κοινωνικές ομάδες όπως αστέγους, μετανάστες και αδέσποτα ζώα.</p>
+        <h3 class="dimgrey margin-top">24-25 Σεπτέμβρη 2016, Πολυχώρος Μύλος</h3>
 
-        <p>Τί θα περιλαμβάνει το πρώτο <i>"Flea Market & Street Food SKG"</i>:</p>
+        <p class="md-body-1 kt-justify">O Upnloud δημιουργεί το πρώτο <i>Flea Market & Street Food SKG</i> με όραμα να
+            καθιερώσει μια εβδομαδιαία γιορτή γεύσεων και ανταλλαγής αντικειμένων στην Θεσσαλονίκη.
+            Στην πρώτη συνάντηση οι επισκέπτες έρχονται σε επαφή με την εναλλακτική χρήση αντικειμένων, μαθαίνουν την
+            αξία του παλιού και νιώθουν
+            τη χαρά να το μεταποιείς σε κάτι νέο. Γνωρίζουν νέες κουλτούρες μέσω της γεύσης (street food) ενώ τα παιδιά
+            γίνονται ενεργά (workshops, outdoor games).
+            Ενημερώνονται για κοινωνικά προβλήματα και βοηθάνε ασθενείς κοινωνικές ομάδες όπως άστεγους, μετανάστες και
+            αδέσποτα ζώα.</p>
 
-        <ul>
+        <h2 class="md-subhead">Τί περιλαμβάνει το πρώτο <i>Flea Market & Street Food SKG</i>:</h2>
+
+        <ul class="md-body-1 kt-justify">
             <li>Ανοιχτή αγορά με δίσκους, ρούχα, υποδήματα, κατασκευές, ηλεκτρικές συσκευές, έργα τέχνης, παιχνίδια</li>
             <li>Street food: Γεύσεις από διάφορα σημεία του κόσμου</li>
-            <li>Workshops & Παρουσιάσεις βιβλίων για παιδιά</li>
-            <li>Χώρος για οργανώσεις για την ενημέρωση του προσφυγικού και συλλογής αγαθών για πρόσφυγες και αστέγους</li>
+            <li>Workshops & Παρουσιάσεις βιβλίων για τα παιδιά</li>
+            <li>Χώρος για οργανώσεις για την ενημέρωση του προσφυγικού και συλλογής αγαθών για πρόσφυγες και αστέγους
+            </li>
             <li>Μουσικές εκδηλώσεις με DJs</li>
-            <li>Bar & Chill Zone</li>
+            <li> Bar & Chill Zone</li>
             <li>Χώρος για τις φιλοζωϊκές για ενημέρωση και διάθεση αδέσποτων ζώων</li>
         </ul>
 
-        <h2>Υποστηρικτές</h2>
+
+        <br/>
+
+
+        <div>
+            <h3 class="dimgrey margin-top">Υπό την αιγίδα</h3>
+            <md-divider></md-divider>
+
+            <md-grid-list
+                    md-cols-xs="4" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="8"
+                    md-row-height-gt-md="1:1" md-row-height="1:1"
+                    md-gutter="12px" md-gutter-gt-sm="30px">
+
+                <md-grid-tile ng-repeat="logo in aboutCtrl.logosDimosUrl track by $index">
+                    <a ng-href="{{logo}}" target="_blank" ng-mouseenter="active=true" ng-mouseleave="active=false"
+                       ng-class="active ? 'active-logo' : 'logo'">
+                        <img ng-src="assets/img/logos/dimos/{{$index}}.jpg"/>
+                    </a>
+                </md-grid-tile>
+
+            </md-grid-list>
+        </div>
+
+        <div>
+            <h3 class="dimgrey margin-top">Media partners</h3>
+            <md-divider></md-divider>
+
+            <md-grid-list
+                    md-cols-xs="4" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="8"
+                    md-row-height-gt-md="1:1" md-row-height="1:1"
+                    md-gutter="12px" md-gutter-gt-sm="30px">
+
+                <md-grid-tile ng-repeat="logo in aboutCtrl.logosMediaUrl track by $index">
+                    <a ng-href="{{logo}}" target="_blank" ng-mouseenter="active=true" ng-mouseleave="active=false"
+                       ng-class="active ? 'active-logo' : 'logo'">
+                        <img ng-src="assets/img/logos/mediaPartners/{{$index}}.jpg"/>
+                    </a>
+                </md-grid-tile>
+
+            </md-grid-list>
+        </div>
+
+        <div>
+            <h3 class="dimgrey margin-top">Supporters</h3>
+            <md-divider></md-divider>
+
+            <md-grid-list
+                    md-cols-xs="4" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="8"
+                    md-row-height-gt-md="1:1" md-row-height="1:1"
+                    md-gutter="12px" md-gutter-gt-sm="30px">
+
+                <md-grid-tile ng-repeat="logo in aboutCtrl.logosSupportersUrl track by $index">
+                    <a ng-href="{{logo}}" target="_blank" ng-mouseenter="active=true" ng-mouseleave="active=false"
+                       ng-class="active ? 'active-logo' : 'logo'">
+                        <img ng-src="assets/img/logos/supporters/{{$index}}.jpg"/>
+                    </a>
+                </md-grid-tile>
+
+            </md-grid-list>
+        </div>
+
+        <div>
+            <h3 class="dimgrey margin-top">Social partners</h3>
+            <md-divider></md-divider>
+
+            <md-grid-list
+                    md-cols-xs="4" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="8"
+                    md-row-height-gt-md="1:1" md-row-height="1:1"
+                    md-gutter="12px" md-gutter-gt-sm="30px">
+
+                <md-grid-tile ng-repeat="logo in aboutCtrl.logosSocialUrl track by $index">
+                    <a ng-href="{{logo}}" target="_blank" ng-mouseenter="active=true" ng-mouseleave="active=false"
+                       ng-class="active ? 'active-logo' : 'logo'">
+                        <img ng-src="assets/img/logos/socialPartners/{{$index}}.jpg"/>
+                    </a>
+                </md-grid-tile>
+
+            </md-grid-list>
+        </div>
+
+        <div>
+            <h3 class="dimgrey margin-top">Street food</h3>
+            <md-divider></md-divider>
+
+            <md-grid-list
+                    md-cols-xs="4" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="8"
+                    md-row-height-gt-md="1:1" md-row-height="1:1"
+                    md-gutter="12px" md-gutter-gt-sm="30px">
+
+                <md-grid-tile ng-repeat="logo in aboutCtrl.logosStreetFoodUrl track by $index">
+                    <a ng-href="{{logo}}" target="_blank" ng-mouseenter="active=true" ng-mouseleave="active=false"
+                       ng-class="active ? 'active-logo' : 'logo'">
+                        <img ng-src="assets/img/logos/streetFood/{{$index}}.jpg"/>
+                    </a>
+                </md-grid-tile>
+
+            </md-grid-list>
+        </div>
+
     </div>
+
+
+
 </md-content>

@@ -1,14 +1,13 @@
-<md-content flex layout="row" layout-align="center center">
-    <div flex="60" flex-xs="100" layout="column" layout-padding class="over-fab-trigger">
-        <h3 ng-if="$mdMedia('xs')" style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h2>
-        <h2 ng-if="$mdMedia('gt-xs')" style="align-self: center;">ΜΙΛΑ ΜΕ ΤΗΝ ΟΜΑΔΑ</h3>
-        <p>
-            Αν εχεις απορια στειλε μηνυμα και μπλα μπλα
-        </p>
+<md-content flex layout="row" layout-align="center center" class="kt-test">
+    <div flex="70" flex-xs="100" layout="column" layout-padding class="over-fab-trigger">
+        <!--<h2 class="md-title">ΕΠΙΚΟΙΝΩΝΙΑ</h2>-->
+        <h3 class="dimgrey margin-top">Μίλα με την ομάδα</h3>
 
-        <form novalidate name="contactForm" ng-submit="">
-            <md-content layout="column">
-                <md-input-container class="md-block md-accent">
+        <md-content md-whiteframe="5">
+        <form novalidate id="contact-form" name="contactForm" ng-submit="" >
+            <md-content layout="column" class="contact-letter">
+
+                <md-input-container style="width:60%;" class="md-block">
                     <label for="name">Το όνομά σου</label>
                     <input
                             ng-model="person.name"
@@ -21,7 +20,7 @@
                     </div>
                 </md-input-container>
 
-                <md-input-container class="md-block md-accent" layout="column">
+                <md-input-container style="width:60%;" class="md-block" layout="column">
                     <label for="email">Το email σου (για να σου απαντήσουμε)</label>
                     <input
                             ng-model="person.email"
@@ -35,7 +34,7 @@
                     </div>
                 </md-input-container>
 
-                <md-input-container class="md-block md-accent">
+                <md-input-container class="md-block">
                     <label for="message">Η ερώτησή σου</label>
             <textarea
                     ng-model="person.message"
@@ -54,9 +53,10 @@
             </md-content>
 
             <md-input-container layout="row" layout-align="end center">
-                <md-button class="md-raised md-primary" type="submit">ΑΠΟΣΤΟΛΗ</md-button>
+                <md-button class="md-raised md-accent" type="submit">ΑΠΟΣΤΟΛΗ</md-button>
             </md-input-container>
         </form>
+        </md-content>
     </div>
 
 </md-content>

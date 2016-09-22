@@ -1,24 +1,37 @@
 /* app css stylesheet */
 
 body {
-    font-family: 'Ubuntu Condensed', Arial, Tahoma;
+    /*font-family: 'Ubuntu Condensed', Arial, Tahoma;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
+
 .bg-img {
     background-image: url("assets/img/Overview_3d.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
-
+.about-top-padding {
+    padding-top: 30px;
+}
 #main-content {
     /*margin-top: 4%;*/
 }
 #top-toolbar {
     border-bottom: 1px solid lightgray;
+    background-color: #FFFFFF;
+    /*background: url('assets/img/motivoTr.jpg');*/
+    /*background-size: contain;*/
 }
-#top-toolbar .menu-toolbar-button {
+.kt-test {
+    background: url('assets/img/motivoTr.jpg');
+    /*background-size: contain;*/
+}
+#top-toolbar .menu-toolbar-button.lightgrey {
     color: lightgray;
 }
-#top-toolbar .active {
+
+#top-toolbar .menu-toolbar-button.lightgrey.active {
     color: #ed8a29;
 }
 
@@ -57,6 +70,34 @@ md-toolbar .md-menu {
     z-index:9999;
     background-color: rgb(0,96,100);
 }
+
+/*not sure if we need those*/
+#left-content{
+  background-color: #f1f1f1;
+  padding: 2 2 5 2px;
+  margin: 0 2 0 0px;
+  border-radius: 10px;
+}
+
+#left-image {
+  border: 2px #ed8a29 solid;
+  border-radius: 2 0 2 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#right-content{
+  background-color: #f1f1f1;
+  padding: 2 2 5 2px;
+  margin: 0 0 0 2px;
+  border-radius: 9px;
+}
+
+#right-image{
+  border: 2px #ed8a29 solid;
+  border-radius: 2 0 2 0px !important;
+  padding-bottom: 0px !important;
+}
+
 /*.md-fab-toolbar {*/
     /*width: 100%;*/
 /*}*/
@@ -70,24 +111,20 @@ md-toolbar .md-menu {
 /*}*/
 .info-image {
     width: 100%;
+    margin-bottom: 20px;
 }
-
-/*.info-image.left {*/
-    /*float: left;*/
-    /*margin: 0 6px 6px 0;*/
-/*}*/
-
-/*.info-image.right {*/
-    /*float: right;*/
-    /*margin: 0 0 6px 6px;*/
-/*}*/
+.margin-top {
+    margin-top: 30px;
+}
 .main-logo, .main-logo-sm {
     height: 100%;
 }
 .main-logo img {
-    height: 105px;
+    height: 130px;
     background-color: white;
     border-radius: 50%;
+    margin-top: -15px;
+    border-bottom: 2px solid lightgray;
 }
 .main-logo-sm img {
     height: 88px;
@@ -104,7 +141,12 @@ md-toolbar .md-menu {
 .event-date {
     transform: rotate(-45deg) !important;
 }
-
+.lightgrey {
+    color: lightgrey;
+}
+.dimgrey {
+    color: dimgrey;
+}
 
 .filling-line {
     position: absolute;
@@ -206,7 +248,9 @@ ol, ul {
     text-align: justify;
     text-justify: inter-word;
 }
-
+.kt-align {
+    text-align: center;
+}
 .kt-bold {
     font-weight: 800;
 }
@@ -217,6 +261,18 @@ ol, ul {
 .carousel {
     height: 100%;
 }
+.carousel-caption {
+    right:0;
+    left: 0;
+    bottom: -5%;
+}
+.carousel-indicators {
+    bottom:12%;
+}
+.carousel-caption h2{
+    padding: 10px 0 10px 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.9), rgba(0,0,0,0.5));
+}
 
 /*Material icons custom color*/
 .material-icons.orange600 { color: #FB8C00 !important; }
@@ -224,4 +280,51 @@ ol, ul {
 
 .over-fab-trigger {
     z-index: 20;
+}
+
+
+.plan {
+    width: 100%;
+}
+
+
+md-grid-tile a {
+    display: flex;
+    height: 100%;
+}
+md-grid-tile a img {
+    height: 90%;
+    width: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+.kt-thumbnail {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#contact-form .md-button span{
+    color: whitesmoke;
+}
+.contact-letter {
+    background: url('assets/img/stampTaxFreeTr.png') 100% 0 no-repeat;
+    background-size: 35%;
+    opacity: 0.8;
+}
+
+.active-main-logo img {
+    background-color: lightgrey;
+}
+.logo {
+    opacity: 0.7;
+}
+.active-logo {
+    opacity: 1;
+}
+.pricelist {
+    padding-top: 20px;
+}
+table.md-table:not(.md-row-select) td.md-cell:first-child {
+    color: grey;
 }
