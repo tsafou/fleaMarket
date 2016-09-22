@@ -308,7 +308,7 @@ md-grid-tile a img {
 }
 .contact-letter {
     background: url('assets/img/stampTaxFreeTr.png') 100% 0 no-repeat;
-    background-size: 35%;
+    background-size: 30%;
     opacity: 0.8;
 }
 
@@ -326,4 +326,7 @@ md-grid-tile a img {
 }
 table.md-table:not(.md-row-select) td.md-cell:first-child {
     color: grey;
+}
+.green {
+    color: green;
 }

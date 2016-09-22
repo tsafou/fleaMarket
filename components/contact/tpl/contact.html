@@ -3,10 +3,9 @@
         <!--<h2 class="md-title">ΕΠΙΚΟΙΝΩΝΙΑ</h2>-->
         <h3 class="dimgrey margin-top">Μίλα με την ομάδα</h3>
 
-        <md-content md-whiteframe="5">
-        <form novalidate id="contact-form" name="contactForm" ng-submit="" >
+        <md-content md-whiteframe="4" layout-padding>
+        <form novalidate id="contact-form" name="contactForm" ng-submit="contactCtrl.sendEmail()">
             <md-content layout="column" class="contact-letter">
-
                 <md-input-container style="width:60%;" class="md-block">
                     <label for="name">Το όνομά σου</label>
                     <input
@@ -53,7 +52,8 @@
             </md-content>
 
             <md-input-container layout="row" layout-align="end center">
-                <md-button class="md-raised md-accent" type="submit">ΑΠΟΣΤΟΛΗ</md-button>
+                <p ng-show="contactCtrl.showSuccess" flex class="green">Το μήνυμά σου έφυγε επιτυχώς!</p>
+                <md-button class="md-raised md-accent" type="submit" ng-disabled="!contactForm.$valid">ΑΠΟΣΤΟΛΗ</md-button>
             </md-input-container>
         </form>
         </md-content>
