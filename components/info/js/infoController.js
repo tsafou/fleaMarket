@@ -107,17 +107,17 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
     vm.merchants = [
         {
             zone: 'Κανονικός Πάγκος',
-            dimensions: '1.25x60',
+            dimensions: '1,25 * 0,60',
             price: 90
         },
         {
             zone: 'Προνομιακός Πάγκος',
-            dimensions: '1.80x76',
+            dimensions: '1,80 * 0,76',
             price: 130
         },
         {
             zone: '2 Κανονικοί Πάγκοι Ενωμένοι',
-            dimensions: '2.50x60',
+            dimensions: '2,50 * 0,60',
             price: 180
         }
     ];
@@ -169,6 +169,122 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox) {
         }
     ];
 
+    vm.dj = [
+        {
+            time: '10πμ - 12μμ',
+            sat: 'Elena Angelidou',
+            sun: 'Oldman Talkin’'
+        },
+        {
+            time: '12μμ - 2μμ',
+            sat: 'DJ Penelope',
+            sun: 'Fotis Tendts'
+        },
+        {
+            time: '2μμ - 4μμ',
+            sat: 'Phon',
+            sun: 'Chris Ex'
+        },
+        {
+            time: '4μμ - 6μμ',
+            sat: 'Leonidas Dedeoglou',
+            sun: 'Tania'
+        },
+        {
+            time: '6μμ - 8μμ',
+            sat: 'theMACK',
+            sun: 'Ioannis (Kocmoc)'
+        },
+        {
+            time: '8μμ - 10μμ',
+            sat: 'Anatoli',
+            sun: 'ØD'
+        }
+    ];
+
+    vm.schedule = [
+        {
+            time: '10πμ',
+            sat: {
+                title: 'Έναρξη Flea Market',
+                desc: 'Έναρξη Flea Market'
+            },
+            sun: {
+                title: 'Έναρξη δεύτερης ημέρας',
+                desc: 'Έναρξη δεύτερης ημέρας'
+            }
+        },
+        {
+            time: '11:30πμ',
+            sat: {
+                title: '',
+                desc: 'Παρουσίαση παραμυθιού "Το κουκλοθέατρο των ονείρων με τη Σάρλοτ"',
+                dur: '(Διάρκεια: 60 λεπτά)'
+            },
+            sun: {
+                title: '',
+                desc: 'Παρουσίαση παραμυθιού "Το κουκλοθέατρο των ονείρων με τη Σάρλοτ"',
+                dur: '(Διάρκεια: 60 λεπτά)'
+
+            }
+        },
+        {
+            time: '1μμ',
+            sat: {
+                title: '',
+                desc: 'Εργαστήριο για παιδιά "Οικογένεια τεράτων"',
+                dur: '(Διάρκεια: 50 λεπτά)'
+
+            },
+            sun: {
+                title: '',
+                desc: 'Εργαστήριο για παιδιά "Οικογένεια τεράτων"',
+                dur: '(Διάρκεια: 50 λεπτά)'
+
+            }
+        },
+        {
+            time: '3μμ',
+            sat: {
+                title: '',
+                desc: 'Εργαστήριο για παιδιά "Οικογένεια τεράτων"',
+                dur: '(Διάρκεια: 50 λεπτά)'
+
+            },
+            sun: {
+                title: '',
+                desc: 'Εργαστήριο για παιδιά "Οικογένεια τεράτων"',
+                dur: '(Διάρκεια: 50 λεπτά)'
+
+            }
+        },
+        {
+            time: '6μμ',
+            sat: {
+                title: '',
+                desc: 'Παρουσίαση παραμυθιού "Το κουκλοθέατρο των ονείρων με τη Σάρλοτ"',
+                dur: '(Διάρκεια: 60 λεπτά)'
+
+            },
+            sun: {
+                title: '',
+                desc: 'Παρουσίαση παραμυθιού "Το κουκλοθέατρο των ονείρων με τη Σάρλοτ"',
+                dur: '(Διάρκεια: 60 λεπτά)'
+
+            }
+        },
+        {
+            time: '10μμ',
+            sat: {
+                title: 'Λήξη 1ης ημέρας',
+                desc: 'Λήξη 1ης ημέρας'
+            },
+            sun: {
+                title: 'Λήξη Flea Market',
+                desc: 'Λήξη Flea Market'
+            }
+        }
+    ];
 
     vm.activeImageUrl = vm.gallery[0].url;
     vm.setActiveImage = function (index) {

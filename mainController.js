@@ -11,7 +11,8 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
     $scope.$mdMedia = $mdMedia;
     var originatorEv;
     var faq, terms;
-
+    $scope.state = $state;
+    
     vm.menuItems = [
         // {
         //     "name": "Aρχικη",
@@ -58,37 +59,50 @@ function mainController($scope, $rootScope, $mdSidenav, $state, $timeout, $docum
         $mdOpenMenu(ev);
     };
 
-    
-    $http({
-        method: 'GET',
-        url: 'components/var/terms.txt'
-    }).then(function(res) {
-        terms = res.data;
-    });
-    $http({
-        method: 'GET',
-        url: 'components/var/faq.txt'
-    }).then(function(res) {
-        faq = res.data;
-    });
 
-    vm.showTerms = function () {
-            alert = $mdDialog.alert({
-            title: 'Οροι Συμμετοχης',
-            textContent: terms.text,
-            ok: 'Κλεισιμο'
+    // $http({
+    //     method: 'GET',
+    //     url: 'components/var/terms.txt'
+    // }).then(function(res) {
+    //     terms = res.data;
+    // });
+    // $http({
+    //     method: 'GET',
+    //     url: 'components/var/faq.txt'
+    // }).then(function(res) {
+    //     faq = res.data;
+    // });
+
+    vm.showFaq = function () {
+        alert = $mdDialog.alert({
+            title: 'Συχνες Ερωτησεις',
+            // textContent: faq[0].question,
+            // htmlContent: '<div>Test</div>',
+            templateUrl: 'components/var/faq.html',
+            clickOutsideToClose: true,
+            controller: function DialogController($scope, $mdDialog) {
+                $scope.closeDialog = function () {
+                    $mdDialog.hide();
+                }
+            }
         });
         $mdDialog.show(alert);
     };
 
-    vm.showFaq = function () {
-            alert = $mdDialog.alert({
-            title: 'Συχνες Ερωτησεις',
-            // textContent: faq[0].question,
-            htmlContent: '<div>Test</div>',
-            ok: 'Κλεισιμο'
+
+    vm.showBasicInfo = function () {
+        alert = $mdDialog.alert({
+            title: 'Πληροφορίες συμμετοχής',
+            templateUrl: 'components/var/participationInfo.html',
+            clickOutsideToClose: true,
+            controller: function DialogController($scope, $mdDialog) {
+                $scope.closeDialog = function () {
+                    $mdDialog.hide();
+                }
+            }
         });
         $mdDialog.show(alert);
-    }
+    };
+
 
 }

@@ -11,7 +11,7 @@ angular.module('fleaMarket', [
     'md.data.table',
     'bootstrapLightbox',
     'angular-loading-bar',
-    // 'ngSanitize',
+    'ngSanitize',
 ]).config(['$locationProvider', '$urlRouterProvider', '$stateProvider', '$mdThemingProvider', 'cfpLoadingBarProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, $mdThemingProvider, cfpLoadingBarProvider) {
     // $locationProvider.hashPrefix('!');
     cfpLoadingBarProvider.includeSpinner = false;
@@ -99,10 +99,10 @@ angular.module('fleaMarket', [
         '700': 'd32f2f',
         '800': 'c62828',
         '900': 'b71c1c',
-        'A100': 'ff8a80',
+        'A100': '3470b7',
         'A200': 'ff5252',
         'A400': 'ff1744',
-        'A700': 'd50000',
+        'A700': 'ffffff',
         'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
                                             // on this palette should be dark or light
 
@@ -113,6 +113,13 @@ angular.module('fleaMarket', [
     $mdThemingProvider.theme('default')
         .primaryPalette('grey',
             {'default': '50'})
+        .accentPalette('tsafou',
+            {'default': '50'}) //amber
+        .backgroundPalette('grey', {
+            'default': '50'
+        });
+    $mdThemingProvider.theme('tabs')
+        .primaryPalette('tsafou', {'default': 'A100'})
         .accentPalette('tsafou',
             {'default': '50'}) //amber
         .backgroundPalette('grey', {
