@@ -1,0 +1,366 @@
+<?=$this->docType(); ?>
+<html>
+<head>
+    <base href="/">
+    <link rel="icon" href="/assets/img/apifon.ico">
+
+    <!-- build:css(mookee-src/template) css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../../bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.min.css" />
+    <link rel="stylesheet" href="../../bower_components/intro.js/introjs.css" />
+    <link rel="stylesheet" href="../../bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="../../bower_components/angular-material-data-table/dist/md-data-table.css" />
+    <link rel="stylesheet" href="../../bower_components/angular-snap/angular-snap.css" />
+    <link rel="stylesheet" href="../../bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="../../bower_components/angular-ui-grid/ui-grid.min.css" />
+    <link rel="stylesheet" href="../../bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../../bower_components/devices.css/assets/devices.min.css" />
+    <link rel="stylesheet" href="../../bower_components/mdPickers/dist/mdPickers.min.css" />
+    <link rel="stylesheet" href="../../bower_components/ngprogress/ngProgress.css" />
+    <link rel="stylesheet" href="../../bower_components/smDateTimeRangePicker/src/picker.css" />
+    <link rel="stylesheet" href="../../bower_components/v-button/dist/v-button.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(mookee-src/template) css/main.css -->
+    <link rel="stylesheet" href="../css/main.app.css">
+    <link rel="stylesheet" href="../css/af.ui-grid.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/af.topbar.css">
+    <link rel="stylesheet" href="../css/af.toast.css">
+    <link rel="stylesheet" href="../css/af.messenger.css">
+    <link rel="stylesheet" href="../css/af.column.css">
+    <link rel="stylesheet" href="../css/af.buttons.css">
+    <link rel="stylesheet" href="../css/af.elements.css">
+    <link rel="stylesheet" href="../css/af.autocomplete.css">
+    <link rel="stylesheet" href="../css/af.loaders.css">
+    <link rel="stylesheet" href="../css/af.chips.css">
+    <link rel="stylesheet" href="../css/af.menu-sidenav.css">
+    <link rel="stylesheet" href="../css/af.md.data.table.css">
+    <link rel="stylesheet" href="../css/web2sms.css">
+    <link rel="stylesheet" href="../css/sms.tracking.css">
+    <link rel="stylesheet" href="../css/financial.css">
+    <link rel="stylesheet" href="../css/provider.css">
+    <link rel="stylesheet" href="../css/tours.css">
+    <!-- endbuild -->
+
+    <?php
+        echo $this->headMeta()->setCharset('utf-8');
+        echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0');
+    ?>
+
+    <!-- build:js(mookee-src/template) js/vendor.js -->
+    <!-- bower:js -->
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="../../bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.min.js"></script>
+    <script src="../../bower_components/adf-structures-base/dist/adf-structures-base.js"></script>
+    <script src="../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="../../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../../bower_components/angular-elastic/elastic.js"></script>
+    <script src="../../bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="../../bower_components/intro.js/intro.js"></script>
+    <script src="../../bower_components/angular-intro.js/src/angular-intro.js"></script>
+    <script src="../../bower_components/angular-messages/angular-messages.js"></script>
+    <script src="../../bower_components/angular-material/angular-material.js"></script>
+    <script src="../../bower_components/angular-material-data-table/dist/md-data-table.js"></script>
+    <script src="../../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../../bower_components/snapjs/snap.js"></script>
+    <script src="../../bower_components/angular-snap/angular-snap.js"></script>
+    <script src="../../bower_components/angular-ui-grid/ui-grid.js"></script>
+    <script src="../../bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="../../bower_components/material-wizard/dist/material-wizard.js"></script>
+    <script src="../../bower_components/moment/moment.js"></script>
+    <script src="../../bower_components/mdPickers/dist/mdPickers.min.js"></script>
+    <script src="../../bower_components/ngprogress/build/ngprogress.min.js"></script>
+    <script src="../../bower_components/pdfmake/build/pdfmake.js"></script>
+    <script src="../../bower_components/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../../bower_components/Snap.js/snap.js"></script>
+    <script src="../../bower_components/smDateTimeRangePicker/src/picker.js"></script>
+    <script src="../../bower_components/v-button/dist/v-button.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js(mookee-src/template) js/app.js -->
+    <script src="../js/modules/utils/utils.service.js"></script>
+    <script src="../js/modules/utils/view.helper.js"></script>
+
+    <script src="../js/main/main.js"></script>
+    <script src="../js/main/config.js"></script>
+
+    <script src="../js/main/filters/filters.js"></script>
+
+    <script src="../js/main/services/menu.service.js"></script>
+    <script src="../js/main/services/state.resolver.service.js"></script>
+    <script src="../js/main/services/dirty.states.service.js"></script>
+    <script src="../js/main/directives/af.menu.link.directive.js"></script>
+    <script src="../js/main/directives/af.menu.toggle.directive.js"></script>
+    <script src="../js/main/directives/af.dirty.states.directive.js"></script>
+    <script src="../js/main/directives/af.validation.directive.js"></script>
+    <script src="../js/main/directives/af.grid.assets.directive.js"></script>
+
+    <script src="../js/main/services/bootstrap.service.js"></script>
+    <script src="../js/main/services/http.pending.requests.service.js"></script>
+    <script src="../js/main/services/notification.service.js"></script>
+    <script src="../js/main/services/tour.service.js"></script>
+    <script src="../js/main/services/search.query.service.js"></script>
+    <script src="../js/main/services/countries.service.js"></script>
+    <script src="../js/main/services/networks.service.js"></script>
+
+    <script src="../js/main/factories/domain.object.factory.js"></script>
+    <script src="../js/main/factories/http.request.timeout.interceptor.factoy.js"></script>
+    <script src="../js/main/factories/notification.storage.factory.js"></script>
+    <script src="../js/main/factories/tours.storage.factory.js"></script>
+    <script src="../js/main/factories/search.query.storage.factory.js"></script>
+    
+    <script src="../js/components/dashboard/controllers/dashboard.controller.js"></script>
+    
+    <script src="../js/components/account/controllers/account.controller.js"></script>
+    <script src="../js/components/account/controllers/account.search.controller.js"></script>
+    <script src="../js/components/account/controllers/account.create.controller.js"></script>
+    <script src="../js/components/account/controllers/account.create.setBillingInfo.controller.js"></script>
+    <script src="../js/components/account/factories/account.filtering.storage.factory.js"></script>
+
+    <script src="../js/components/account/services/account.service.js"></script>
+    <script src="../js/components/user/services/user.service.js"></script>
+    <script src="../js/components/user/services/user.service.js"></script>
+    <script src="../js/components/service/controllers/services.abstract.controller.js"></script>
+    <script src="../js/components/service/controllers/services.create.controller.js"></script>
+    <script src="../js/components/service/controllers/services.details.controller.js"></script>
+    <script src="../js/components/service/controllers/services.list.controller.js"></script>
+    <script src="../js/components/service/controllers/services.search.controller.js"></script>
+    <script src="../js/components/service/controllers/services.settings.controller.js"></script>
+    <script src="../js/components/service/controllers/services.configuration.controller.js"></script>
+    <script src="../js/components/service/controllers/services.metadata.controller.js"></script>
+    <script src="../js/components/service/controllers/services.security.controller.js"></script>
+    <script src="../js/components/service/controllers/select.service.list.controller.js"></script>
+
+    <script src="../js/components/service/factories/services.grid.storage.factory.js"></script>
+    <script src="../js/components/service/factories/services.storage.factory.js"></script>
+
+    <script src="../js/components/provider/controllers/providers.abstract.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.list.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.search.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.create.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.details.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.settings.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.accounting.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.balanceAPI.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.company.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.routing.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.sales.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.support.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.webtool.controller.js"></script>
+    <script src="../js/components/provider/controllers/providers.list.details.create.gateway.controller.js"></script>
+    <script src="../js/components/provider/controllers/select.provider.list.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.abstract.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.list.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.search.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.details.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.settings.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.connection.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.logs.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.coverage.create.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.coverage.create.country.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.coverage.create.country.network.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.coverage.edit.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateway.provider.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.create.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.create.setProvider.controller.js"></script>
+    <script src="../js/components/provider/controllers/gateways.import.controller.js"></script>
+    <script src="../js/components/provider/controllers/select.gateway.list.controller.js"></script>
+    <script src="../js/components/provider/factories/provider.grid.storage.factory.js"></script>
+    <script src="../js/components/provider/factories/provider.storage.factory.js"></script>
+    <script src="../js/components/provider/factories/gateway.grid.storage.factory.js"></script>
+    <script src="../js/components/provider/factories/gateway.storage.factory.js"></script>
+    <script src="../js/components/provider/factories/cost.storage.factory.js"></script>
+
+    <script src="../js/modules/routing/routing.js"></script>
+    <script src="../js/modules/ngDragScroll/ng.drag.scroll.js"></script>
+
+    <script src="../js/components/provider/factories/provider.grid.storage.factory.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsContacts.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContacts.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContacts.list.create.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContacts.list.edit.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContacts.list.search.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContacts.list.massGroup.controller.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsContactFields.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContactFields.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContactFields.list.create.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsContactFields.list.edit.controller.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsGroups.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsGroups.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsGroups.list.create.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsGroups.list.edit.controller.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsTemplates.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsTemplates.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsTemplates.list.create.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsTemplates.list.edit.controller.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsImports.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.wizard.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.wizard.create.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.wizard.preview.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.wizard.import.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsImports.list.wizard.import.groups.controller.js"></script>
+
+    <script src="../js/components/web2sms/controllers/wsCampaigns.abstract.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.details.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.settings.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.body.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.recipients.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.testing.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.wizard.summary.controller.js"></script>
+    <script src="../js/components/web2sms/controllers/wsCampaigns.list.search.controller.js"></script>
+
+    <script src="../js/components/web2sms/services/wsCampaigns.service.js"></script>
+    <script src="../js/components/web2sms/services/wsImports.service.js"></script>
+
+    <script src="../js/components/web2sms/factories/contacts.grid.storage.factory.js"></script>
+    <script src="../js/components/web2sms/factories/imports.grid.storage.factory.js"></script>
+    <script src="../js/components/web2sms/factories/contact.fields.storage.factory.js"></script>
+    <script src="../js/components/web2sms/factories/groups.storage.factory.js"></script>
+    <script src="../js/components/web2sms/factories/templates.storage.factory.js"></script>
+    <script src="../js/components/web2sms/factories/campaigns.grid.storage.factory.js"></script>
+
+    <script src="../js/components/smsTracking/controllers/sms.tracking.abstract.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.details.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.resend.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.search.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.search.country.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.search.country.network.controller.js"></script>
+    <script src="../js/components/smsTracking/controllers/sms.tracking.list.search.status.controller.js"></script>
+
+    <script src="../js/components/smsTracking/services/sms.tracking.search.service.js"></script>
+
+    <script src="../js/components/callback/controllers/callback.abstract.controller.js"></script>
+    <script src="../js/components/callback/controllers/callback.list.controller.js"></script>
+    <script src="../js/components/callback/controllers/callback.list.details.controller.js"></script>
+    <script src="../js/components/callback/controllers/callback.list.search.controller.js"></script>
+
+    <script src="../js/components/smsTracking/factories/sms.tracking.grid.storage.factory.js"></script>
+    <script src="../js/components/callback/factories/callback.grid.storage.factory.js"></script>
+
+    <script src="../js/components/transactions/controllers/transactions.abstract.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.list.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.create.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.search.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.details.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.items.controller.js"></script>
+    <script src="../js/components/transactions/controllers/transactions.paypal.controller.js"></script>
+    <script src="../js/components/transactions/controllers/paypal.temp.controller.js"></script>
+    <script src="../js/components/transactions/controllers/paypal.temp.cancel.controller.js"></script>
+
+    <script src="../js/components/transactions/factories/transactions.grid.storage.factory.js"></script>
+    <script src="../js/components/transactions/factories/transactions.summary.grid.storage.factory.js"></script>
+
+    <script src="../js/components/transactions/controllers/requests.abstract.controller.js"></script>
+    <script src="../js/components/transactions/controllers/requests.list.controller.js"></script>
+    <script src="../js/components/transactions/controllers/requests.create.controller.js"></script>
+    <script src="../js/components/transactions/controllers/requests.search.controller.js"></script>
+    <script src="../js/components/transactions/controllers/requests.edit.controller.js"></script>
+
+    <script src="../js/components/transactions/factories/requests.grid.storage.factory.js"></script>
+
+    <script src="../js/components/transactions/controllers/requests.abstract.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.abstract.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.list.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.search.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.create.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.details.controller.js"></script>
+    <script src="../js/components/transactions/controllers/provider.transactions.items.controller.js"></script>
+
+    <script src="../js/components/transactions/factories/provider.transaction.grid.storage.factory.js"></script>
+    <script src="../js/components/transactions/factories/provider.transactions.summary.grid.storage.factory.js"></script>
+
+    <script src="../js/components/transactions/controllers/plafon.abstract.controller.js"></script>
+    <script src="../js/components/transactions/controllers/plafon.create.controller.js"></script>
+    <script src="../js/components/transactions/controllers/plafon.details.controller.js"></script>
+    <script src="../js/components/transactions/controllers/plafon.list.controller.js"></script>
+    <script src="../js/components/transactions/controllers/plafon.search.controller.js"></script>
+
+    <script src="../js/components/transactions/factories/plafon.grid.storage.factory.js"></script>
+
+    <script src="../js/components/user/controllers/select.user.list.controller.js"></script>
+    <script src="../js/components/user/factories/users.storage.factory.js"></script>
+
+    <script src="../js/components/accounts/controllers/accounts.abstract.controller.js"></script>
+    <script src="../js/components/accounts/controllers/accounts.list.controller.js"></script>
+    <script src="../js/components/accounts/controllers/accounts.search.controller.js"></script>
+    <script src="../js/components/accounts/controllers/select.account.list.controller.js"></script>
+    <script src="../js/components/accounts/factories/accounts.grid.storage.factory.js"></script>
+    <script src="../js/components/accounts/factories/accounts.storage.factory.js"></script>
+
+    <script src="../js/main/directives/af.column.directive.js"></script>
+    <script src="../js/main/directives/af.loading.model.directive.js"></script>
+    <script src="../js/main/directives/af.column.header.directive.js"></script>
+    <script src="../js/main/directives/af.column.body.directive.js"></script>
+    <script src="../js/main/directives/af.column.buttons.directive.js"></script>
+    <script src="../js/main/directives/af.select.list.directive.js"></script>
+    <script src="../js/main/directives/af.autocomplete.directive.js"></script>
+    <script src="../js/main/directives/af.compare.to.directive.js"></script>
+    <script src="../js/main/directives/af.toggle.class.directive.js"></script>
+    <script src="../js/main/directives/af.string.to.number.directive.js"></script>
+    <script src="../js/main/directives/af.service.exists.directive.js"></script>
+
+    <script src="../js/main/controllers/main.controller.js"></script>
+    <script src="../js/main/controllers/menu.controller.js"></script>
+    <script src="../js/main/controllers/tours.controller.js"></script>
+    <script src="../js/main/factories/storage.factory.js"></script>
+    <script src="../js/main/factories/grid.storage.factory.js"></script>
+    <script src="../js/main/factories/job.queue.factory.js"></script>
+
+    <script src="../js/modules/messenger/messenger.js"></script>
+    <!-- endbuild -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body layout="column" ng-app="mookee" ng-controller="mainController as main" resize ng-cloak>
+    <md-content class="af-loading" ng-show="bootstraping" layout="column" layout-align="space-between center">
+        <div></div>
+        <div layout="column" layout-align="space-between center">
+            <img src="/assets/img/battery.gif">
+            <div class="af-loading-label">Loading..</div>
+        </div>
+
+        <img class='af-loading-logo' src="/assets/img/loader-logo.png">
+    </md-content>
+
+    <div id="screen-size" ></div>
+
+    <?php echo isset($this->content) ? $this->content : ''; ?>
+
+    <div ng-class="{'overlay': main.overlay}"></div>
+    
+    <div ng-controller="toursController as tour">
+    <div
+         ng-intro-options="tour.tourService.options"
+         ng-intro-method="tour.tourService.start"
+         ng-intro-onexit="tour.tourService.onExit"
+         ng-intro-exit-method="tour.tourService.forceExit"
+         ng-intro-oncomplete="tour.tourService.onDestroy"
+         ng-intro-onbeforechange="tour.tourService.onChange">
+    </div>
+        
+</body>
+</html>
+
