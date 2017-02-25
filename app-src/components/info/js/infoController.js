@@ -137,7 +137,7 @@ function infoController($scope, $mdSidenav, $state, $mdMedia, Lightbox, $mdDialo
         },
         {
             title: 'jhfdg',
-            url: 'assets/img/gallery/4.jpeg'
+            url: 'assets/img/gallery/4.jpg'
         },
         {
             title: 'kmlkmn',
