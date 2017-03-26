@@ -45,7 +45,7 @@ $mail->setFrom($email, $name);
 //Set an alternative reply-to address
 $mail->addReplyTo($email, $name);
 //Set who the message is to be sent to
-$mail->addAddress('dinos1@hotmail.com', 'ti na valw edw?');
+$mail->addAddress('dinos1@hotmail.com', 'recipient?');
 //Set the subject line
 $mail->Subject = 'Fleamarket Website Contact Form';
 
